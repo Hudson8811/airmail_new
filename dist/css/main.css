@@ -249,6 +249,7 @@ a:hover {
 
 .nav-mobile-button {
   padding: 10px;
+  display: none;
 }
 
 .nav-list {
@@ -2256,6 +2257,9 @@ button.mfp-close {
         -ms-flex-direction: column;
             flex-direction: column;
     display: none;
+  }
+  .nav-mobile-button {
+    display: block;
   }
   .nav-list, .nav-button {
     display: block;

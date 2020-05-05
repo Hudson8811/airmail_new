@@ -61,6 +61,11 @@
     }
 
     .nav {
+        &-mobile {
+            &-button {
+                display: block;
+            }
+        }
         max-height: 0;
         top: 60px;
         left: 0;

@@ -97,6 +97,20 @@ a {
         min-height: 80px;
         padding-left: 42px;
         padding-right: 39px;
+        position: relative;
+
+        &:hover:before{
+            content: '';
+            position: absolute;
+            left: -4px;
+            right: -4px;
+            top: -4px;
+            bottom: -4px;
+            border:2px solid $yellow;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
 
         .icon {
             margin-right: $p*.5;
@@ -117,6 +131,20 @@ a {
 
     &-border {
         border: 1px solid $dark2;
+        position: relative;
+
+        &:hover:after{
+            content: '';
+            position: absolute;
+            left: -2px;
+            bottom: -2px;
+            right: -2px;
+            top: -2px;
+            border:1px solid $dark2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
 
         &-gradient {
             position: relative;
@@ -151,6 +179,13 @@ a {
                 background-color: $dark;
                 border-radius: 4px;
             }
+
+            &:hover:before{
+                left: -2px;
+                right: -2px;
+                top: -2px;
+                bottom: -2px;
+            }
         }
     }
 
@@ -163,6 +198,10 @@ a {
         color: #fff;
         border: none;
         min-height: 72px;
+
+        &:hover{
+            box-shadow: 8px 8px 16px rgba(208, 69, 174, 0.5);
+        }
 
         .btn-text2{
             margin-top: 5px;
@@ -237,10 +276,11 @@ a {
 
     &-link {
         transition: all .3s;
+        opacity: 0.5;
 
         &:hover,
         &.current {
-            color: $red;
+            opacity: 1;
         }
     }
 
@@ -805,6 +845,10 @@ a {
                 position: relative;
                 margin-right: 10px;
 
+                &:hover{
+                    border: 10px solid transparentize($blue2, 0.7);
+                }
+
                 &:before {
                     content: '';
                     position: absolute;
@@ -1124,6 +1168,7 @@ a {
                     align-items: center;
                     justify-content: center;
                     top: 12px;
+                    cursor: pointer;
 
                     > i:first-child {
                         width: 8px;
@@ -1728,8 +1773,15 @@ a {
             color: #fff;
             height: 60px;
             width: 100%;
+            position: relative;
             &:focus{
                 outline: none;
+                border-width: 1px;
+                border-style: solid;
+                border-image: linear-gradient(45deg, #D045AE, #473CC2) 1;
+                border-top:0;
+                border-left: 0;
+                border-right: 0;
             }
         }
     }
@@ -1891,6 +1943,10 @@ a {
             line-height: 13px;
             text-transform: uppercase;
             color: $dark2;
+            
+            &:hover{
+                color: #fff;
+            }
         }
 
         .container {

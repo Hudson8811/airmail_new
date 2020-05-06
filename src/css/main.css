@@ -117,6 +117,18 @@ a:hover {
   min-height: 80px;
   padding-left: 42px;
   padding-right: 39px;
+  position: relative;
+}
+
+.btn-yellow:hover:before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  border: 2px solid #E8B006;
+  border-radius: 7px;
 }
 
 .btn-yellow .icon {
@@ -137,6 +149,18 @@ a:hover {
 
 .btn-border {
   border: 1px solid #727885;
+  position: relative;
+}
+
+.btn-border:hover:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  top: -2px;
+  border: 1px solid #727885;
+  border-radius: 5px;
 }
 
 .btn-border-gradient {
@@ -176,6 +200,13 @@ a:hover {
   border-radius: 4px;
 }
 
+.btn-border-gradient:hover:before {
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+}
+
 .btn-gradient {
   background-image: -webkit-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
   background-image: -o-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
@@ -187,6 +218,11 @@ a:hover {
   color: #fff;
   border: none;
   min-height: 72px;
+}
+
+.btn-gradient:hover {
+  -webkit-box-shadow: 8px 8px 16px rgba(208, 69, 174, 0.5);
+          box-shadow: 8px 8px 16px rgba(208, 69, 174, 0.5);
 }
 
 .btn-gradient .btn-text2 {
@@ -278,10 +314,11 @@ a:hover {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+  opacity: 0.5;
 }
 
 .nav-link:hover, .nav-link.current {
-  color: #EB5757;
+  opacity: 1;
 }
 
 .nav-button {
@@ -916,6 +953,10 @@ a:hover {
   margin-right: 10px;
 }
 
+.opportunities-article-link-ico:hover {
+  border: 10px solid rgba(71, 60, 194, 0.3);
+}
+
 .opportunities-article-link-ico:before {
   content: '';
   position: absolute;
@@ -1269,6 +1310,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   top: 12px;
+  cursor: pointer;
 }
 
 .benefit-range-container .irs--flat .irs-handle > i:first-child {
@@ -1941,10 +1983,19 @@ a:hover {
   color: #fff;
   height: 60px;
   width: 100%;
+  position: relative;
 }
 
 .form-item input:focus {
   outline: none;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient(45deg, #D045AE, #473CC2) 1;
+       -o-border-image: -o-linear-gradient(45deg, #D045AE, #473CC2) 1;
+          border-image: linear-gradient(45deg, #D045AE, #473CC2) 1;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .form-button .btn {
@@ -2123,6 +2174,10 @@ a:hover {
   line-height: 13px;
   text-transform: uppercase;
   color: #727885;
+}
+
+.footer-bottom-text:hover {
+  color: #fff;
 }
 
 .footer-bottom .container {

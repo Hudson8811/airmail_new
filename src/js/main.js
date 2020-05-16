@@ -20,7 +20,7 @@ $(document).ready(function () {
     }
 
     $('body').on('click', '.opportunities-list1 .opportunities-link:not(.active)', function () {
-        if ($(window).width() > 960) {
+        if ($(window).width() > 960){
             let tabsOpportunities = $(this).attr('href');
             $('.opportunities-list1 .opportunities-link, .opportunities-list2, .opportunities-list2 .opportunities-link, .opportunities-article').removeClass('active');
             $(this).addClass('active');
@@ -30,18 +30,20 @@ $(document).ready(function () {
     });
 
     $('body').on('click', '.opportunities-list1 .opportunities-link', function () {
-        if ($(window).width() <= 960) {
+        if ($(window).width() <= 960){
             let tabsOpportunities = $(this).attr('href');
             $.magnificPopup.open({
-                items: [{
-                    src: tabsOpportunities,
-                }],
+                items: [
+                    {
+                        src: tabsOpportunities,
+                    }
+                ],
                 type: 'inline'
             });
         }
     });
-
-
+    
+    
     $('body').on('click', '.opportunities-list2 .opportunities-link:not(.active)', function () {
         if ($(window).width() > 960) {
             let tabsOpportunities2 = $(this).attr('href');
@@ -55,28 +57,32 @@ $(document).ready(function () {
     });
 
     $('body').on('click', '.opportunities-list2 .opportunities-link', function () {
-        if ($(window).width() <= 960) {
+        if ($(window).width() <= 960){
             let tabsOpportunities2 = $(this).attr('href');
             $.magnificPopup.open({
-                items: [{
-                    src: tabsOpportunities2,
-                }],
+                items: [
+                    {
+                        src: tabsOpportunities2,
+                    }
+                ],
                 type: 'inline'
             });
         }
     });
 
     $('body').on('click', '.nav-mobile-button', function () {
-        if ($(window).width() <= 960) {
+        if ($(window).width() <= 960){
             $.magnificPopup.open({
-                items: [{
-                    src: '#modal-menu',
-                }],
+                items: [
+                    {
+                        src: '#modal-menu',
+                    }
+                ],
                 type: 'inline'
             });
         }
     });
-
+    
     $('body').on('click', '.opportunities-link', function () {
         return false;
     });
@@ -91,8 +97,8 @@ $(document).ready(function () {
             $('#' + tabsSubscribe).addClass('active');
             $(this).addClass('active');
         });
-
-
+        
+        
         $('body').on('click', '.comparison-tabs-head-item:not(.active)', function () {
             let tabsComparison = $(this).data('tabs');
             $('.comparison-tabs-head-item, .comparison-tabs-hide').removeClass('active');
@@ -102,25 +108,4 @@ $(document).ready(function () {
         });
     };
 
-
-
-
-
-
-    $(window).on("load", function () {
-        $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
-    });
-
-    tippy('[data-tippy-content]', {
-        arrow: false,
-        maxWidth: 152,
-        delay: [0, 100],
-        placement: 'left'
-    });
-
-
-    $(".modal-create-rangeslider").ionRangeSlider({
-
-        extra_classes: 'modal-create-range-slider'
-    });
 });

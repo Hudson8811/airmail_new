@@ -106,6 +106,7 @@ $(document).ready(function () {
 
 
 
+
     tippy('[data-tippy-content]', {
         arrow: false,
         maxWidth: 152,

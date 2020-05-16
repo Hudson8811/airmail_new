@@ -106,6 +106,11 @@ $(document).ready(function () {
 
 
 
+
+    $(window).on("load", function () {
+        $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
+    });
+
     tippy('[data-tippy-content]', {
         arrow: false,
         maxWidth: 152,
@@ -118,8 +123,4 @@ $(document).ready(function () {
 
         extra_classes: 'modal-create-range-slider'
     });
-});
-
-$(window).on("load", function () {
-    $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
 });

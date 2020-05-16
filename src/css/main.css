@@ -2664,6 +2664,10 @@ button.mfp-close {
   color: #E5E8ED;
 }
 
+.mfp-close:active {
+  top: 40px;
+}
+
 @media (max-width: 1400px) {
   .container {
     padding-left: 20px;

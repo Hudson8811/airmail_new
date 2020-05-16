@@ -118,6 +118,16 @@ $(document).ready(function () {
 
         extra_classes: 'modal-create-range-slider'
     });
+
+
+
+    //////////////////
+
+
+    $(".inside-page__hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        $(".fixed-menu").toggleClass('active');
+      });
 });
 
 $(window).on("load", function () {

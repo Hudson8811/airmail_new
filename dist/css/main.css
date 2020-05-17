@@ -447,7 +447,8 @@ a:hover {
 }
 
 .subscribe-tabs-head-free {
-  background-color: rgba(114, 120, 133, 0.4);
+  background-color: rgba(114, 120, 133, 0.2);
+  color: #727885;
 }
 
 .subscribe-tabs-head-free .btn-subscribe {
@@ -456,7 +457,7 @@ a:hover {
 }
 
 .subscribe-tabs-head-base {
-  background-color: rgba(232, 176, 6, 0.4);
+  background-color: rgba(232, 176, 6, 0.2);
   color: #E8B006;
 }
 
@@ -466,7 +467,7 @@ a:hover {
 }
 
 .subscribe-tabs-head-full {
-  background-color: rgba(0, 152, 199, 0.4);
+  background-color: rgba(0, 152, 199, 0.2);
   color: #0098C7;
 }
 
@@ -554,7 +555,7 @@ a:hover {
 }
 
 .subscribe-type-text.current {
-  background-color: #004ACF;
+  background-color: #473CC2;
   border-radius: 4px;
   border-bottom: none;
   color: #fff;
@@ -1178,7 +1179,7 @@ a:hover {
   color: #fff;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .benefit .evolutions-article > * {
@@ -1325,6 +1326,11 @@ a:hover {
   margin-left: 0;
 }
 
+.benefit-range-container .irs--flat .irs-handle:hover {
+  -webkit-box-shadow: 0px 4px 16px rgba(208, 69, 174, 0.3);
+          box-shadow: 0px 4px 16px rgba(208, 69, 174, 0.3);
+}
+
 .benefit-range-text {
   font-weight: bold;
   font-size: 36px;
@@ -1419,7 +1425,7 @@ a:hover {
 .automation:before {
   content: '';
   position: absolute;
-  width: 900px;
+  width: 50vw;
   height: 360px;
   right: calc(50% + 60px);
   top: 50%;
@@ -1568,8 +1574,8 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 11px;
 }
 
 .comparison-hint {
@@ -1591,6 +1597,8 @@ a:hover {
   font-size: 14px;
   line-height: 18px;
   color: rgba(114, 120, 133, 0.5);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .comparison-th {
@@ -2123,6 +2131,7 @@ a:hover {
 .create-checkbox input:checked + .create-checkbox-toggle {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+  opacity: 1;
 }
 
 .create-checkbox input:checked + .create-checkbox-toggle:before {
@@ -2144,6 +2153,7 @@ a:hover {
   transition: all .3s;
   position: relative;
   margin-right: 16px;
+  opacity: 0.4;
 }
 
 .create-checkbox-toggle:before {
@@ -2164,6 +2174,7 @@ a:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  position: relative;
 }
 
 .footer-bottom {
@@ -2417,7 +2428,8 @@ button.mfp-close {
 
 .mCSB_inside > .mCSB_container {
   overflow-x: visible;
-  margin-right: 25px;
+  margin-right: 8px;
+  padding-right: 19px;
 }
 
 .mCSB_scrollTools.mCS-light.mCSB_scrollTools_vertical {
@@ -2751,11 +2763,14 @@ button.mfp-close {
   .tabs-item-title:hover,
   .tabs-item-title.active {
     color: #473CC2;
-    color: linear-gradient(225.49deg, #D045AE 0%, #473CC2 98.79%);
   }
   .tabs-item-input:checked + .tabs-item-title {
+    background: -webkit-linear-gradient(45deg, #D045AE 33%, #473CC2 99%);
+    background: -o-linear-gradient(45deg, #D045AE 33%, #473CC2 99%);
+    background: linear-gradient(45deg, #D045AE 33%, #473CC2 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: #473CC2;
-    color: linear-gradient(225.49deg, #D045AE 0%, #473CC2 98.79%);
   }
   .tabs-item-input:checked + .tabs-item-title:before,
   .tabs-item-title:hover:before,
@@ -2933,18 +2948,37 @@ button.mfp-close {
   }
   .comparison-table {
     padding: 0;
+    -webkit-transform: translateY(-270px);
+        -ms-transform: translateY(-270px);
+            transform: translateY(-270px);
+    margin-bottom: -250px;
   }
   .comparison-table table {
     display: none;
   }
   .comparison-tabs {
     display: block;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
   .comparison-tabs-hide {
-    padding: 20px;
+    padding: 18px;
     border-top: 0;
-    padding-bottom: 0;
     display: none;
+    background: #fff;
+    border-radius: 7px;
+    position: relative;
+  }
+  .comparison-tabs-hide:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: 0px;
+    bottom: 0;
+    width: 5px;
+    background: #fff;
   }
   .comparison-tabs-hide.active {
     display: block;
@@ -2956,7 +2990,13 @@ button.mfp-close {
     overflow-x: auto;
   }
   .comparison-tabs-content {
-    padding-bottom: 0;
+    background-image: -webkit-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
+    background-image: -o-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
+    background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
+    padding: 2px;
+  }
+  .comparison-tabs-title {
+    padding-right: 0;
   }
   .section-page-content {
     padding-left: 10px;
@@ -2969,6 +3009,16 @@ button.mfp-close {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+    background: transparent;
+  }
+  .section-page-head {
+    padding-top: 30px;
+    padding-bottom: 300px;
+  }
+  .section-page-head h1, .section-page-head .h1 {
+    font-weight: 300;
+    font-size: 26.67px;
+    line-height: 35px;
   }
   .section-text {
     padding-top: 40px;
@@ -3003,8 +3053,10 @@ button.mfp-close {
     display: block;
   }
   .section-subtitle {
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .section-top {
     height: 520px;
@@ -3030,6 +3082,8 @@ button.mfp-close {
   }
   .section-opportunities-container .section-title {
     text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .section-evolutions {
     display: -webkit-box;
@@ -3353,6 +3407,9 @@ button.mfp-close {
     margin-right: 0;
     min-height: 133px;
   }
+  .benefit-item-center .benefit-item-logo img {
+    max-width: 90px;
+  }
   .benefit-item-button {
     margin-top: 20px;
     display: none;
@@ -3451,6 +3508,8 @@ button.mfp-close {
   .automation-article {
     text-align: center;
     margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .automation-article.text p {
     font-size: 12px;
@@ -3460,6 +3519,12 @@ button.mfp-close {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  .footer-form-wrap {
+    max-width: 290px;
+  }
+  .footer-form .section-title {
+    margin-bottom: 20px;
+  }
   .footer-form .section-title .h1 br {
     display: none;
   }
@@ -3467,14 +3532,14 @@ button.mfp-close {
     display: none;
   }
   .footer-form-decor2 {
-    left: 20px;
-    top: 308px;
+    left: 38px;
+    top: 265px;
     width: 20px;
   }
   .footer-form-decor3 {
-    right: 20px;
+    right: 13px;
     max-width: 55px;
-    top: 223px;
+    top: 173px;
   }
   .section-text-article .btn-border-gradient {
     display: none;
@@ -3530,6 +3595,10 @@ button.mfp-close {
   .section-morefunc {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .morefunc-subtitle {
+    font-size: 12px;
+    line-height: 16px;
   }
   .morefunc-block {
     -ms-flex-wrap: wrap;

@@ -129,9 +129,7 @@ $(document).ready(function () {
         $(".fixed-menu").toggleClass('active');
     });
 });
-$(window).on("load", function () {
-    $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
-});
+
 
 jQuery(document).ready(function($){
     var contentSections = $('.cd-section'),
@@ -198,4 +196,8 @@ $('.fixed-menu__list-item a').click(function(){
         $(".hamburger ").removeClass("is-active");
     }
 
+});
+
+$(window).on("load", function () {
+    $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
 });

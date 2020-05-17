@@ -71,10 +71,12 @@
     &__hamburger{
         display: none;
     }
-    padding: 80px 0;
+   padding-top: 60px;
     background-color: #FFFFFF;
     &__content{
-        padding: 0 230px 0 718px;
+        margin: 0 230px 0 718px;
+        max-width: 650px;
+        
     }
     &__title{
         font-size: 35px;
@@ -107,8 +109,7 @@
         p{
             font-size: 16px;
             line-height: 32px;
-            color: #292929;
-            font-weight: 300;
+
         }
         p + p{
             margin-top: 30px;
@@ -126,7 +127,7 @@
                 font-size: 16px;
                 line-height: 32px;
                 color: #292929;
-                font-weight: 300;
+              
                 &:before{
                     content: '•';
                     position: absolute;
@@ -167,6 +168,10 @@
         margin-top: 40px;
         padding-top: 40px;
         border-top: 1px solid #ECECEC;
+
+        &.cd-section{
+            padding-bottom: 80px;
+        }
 
         &-down-file{
             width: 0.1px;
@@ -311,7 +316,7 @@
     width: 618px;
     box-sizing: border-box;
     padding: 40px 20px 20px 230px;
-    z-index: 9000;
+    z-index: 900;
     background-color: #1B1F26;
 
     &__logo{
@@ -351,13 +356,16 @@
         color: #fff;
         display: inline-block;
         background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
+        transition: .3s;
+
+        
 
         &-container{
             padding: 10px;
             box-sizing: border-box;
            text-align: center;
             width: 100%;
-            background-color: #1B1F26;
+           
             display: block;
             box-sizing: border-box;
             border-radius: 4px;
@@ -386,10 +394,17 @@
             margin-top: 40px;
         }
         a{
+            position: relative;
+            z-index: 10;
             font-size: 14px;
             line-height: 17px;
             color: rgba(#fff, .5);
             font-weight: 600;
+            transition: .3s;
+
+            &:hover,&.is-selected{
+                color: #fff;
+            }
         }
     }
    
@@ -443,7 +458,7 @@
         line-height: 28px;
         font-weight: 700;
         background-image: linear-gradient(228.29deg, #D045AE 50%, #473CC2 98.79%);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 20px;
     }
@@ -504,6 +519,7 @@
         padding: 1px;
         box-sizing: border-box;
         background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
+        border-radius: 4px;
     }
     &__item-content{
         background-color: #fff;
@@ -513,6 +529,7 @@
         text-align: center;
         padding: 12px 5px;
         box-sizing: border-box;
+        border-radius: 4px;
     }
     &__item-name{
         font-size: 16px;
@@ -527,12 +544,35 @@
         font-weight: 700;
     }
 }
-
+#video-modal{
+    button.mfp-close{
+        right:10px;
+        top: 10px;
+    }
+}
+.thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+        outline-width: 0;
+    }
+  }
+ 
 
 @media (max-width: 1550px){
     .inside-page{
         &__content{
-            padding: 0 50px 0 618px;
+            margin: 0 50px 0 618px;
         }
     }
     .fixed-menu{
@@ -555,7 +595,7 @@
     }
     .inside-page{
         &__content{
-            padding: 0 30px 0 450px;
+            margin: 0 30px 0 450px;
         }
     }
 }
@@ -577,7 +617,7 @@
         }
     }
     .inside-page{
-        padding: 65px 0;
+        
         overflow: hidden;
         &__hamburger{
             position: fixed;
@@ -589,7 +629,9 @@
         }
 
         &__content{
-            padding: 0 20px;
+            max-width: 100%;
+            margin: 0;
+           padding: 0 20px;
         }
         &__text-block{
             margin: 30px 0;

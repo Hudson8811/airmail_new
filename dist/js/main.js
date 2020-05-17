@@ -127,9 +127,75 @@ $(document).ready(function () {
     $(".inside-page__hamburger").click(function(){
         $(this).toggleClass("is-active");
         $(".fixed-menu").toggleClass('active');
-      });
+    });
 });
-
 $(window).on("load", function () {
     $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
+});
+
+jQuery(document).ready(function($){
+    var contentSections = $('.cd-section'),
+        navigationItems = $('#cd-vertical-nav a');
+
+    updateNavigation();
+    $(window).on('scroll', function(){
+        updateNavigation();
+    });
+
+    //smooth scroll to the section
+    navigationItems.on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+    //smooth scroll to second section
+    $('.cd-scroll-down').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+    //open-close navigation on touch devices
+    $('.touch .cd-nav-trigger').on('click', function(){
+        $('.touch #cd-vertical-nav').toggleClass('open');
+
+    });
+    //close navigation on touch devices when selectin an elemnt from the list
+    $('.touch #cd-vertical-nav a').on('click', function(){
+        $('.touch #cd-vertical-nav').removeClass('open');
+    });
+
+    function updateNavigation() {
+        contentSections.each(function(){
+            $this = $(this);
+            var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+            if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+                navigationItems.eq(activeSection).addClass('is-selected');
+            }else {
+                navigationItems.eq(activeSection).removeClass('is-selected');
+            }
+        });
+    }
+
+    function smoothScroll(target) {
+        $('body,html').animate(
+            {'scrollTop':target.offset().top},
+            600
+        );
+    }
+});
+
+
+$(window).on('resize', function(event){
+    windowSize = $(window).width();
+});
+windowSize = $(window).width();
+
+
+$('.fixed-menu__list-item a').click(function(){
+    var windowSize = $(window).width();
+    if(windowSize < 1025){
+
+        $(".fixed-menu ").removeClass("active");
+        $(".hamburger ").removeClass("is-active");
+    }
+
 });

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.min.css">
 
 
 </head>
@@ -30,23 +31,23 @@
                     <div class="fixed-menu__logo">
                         <a class="fixed-menu__logo-image" href="/"></a>
                     </div>
-
-                    <ul class="fixed-menu__list">
-                        <li class="fixed-menu__list-item"><a href="">
+                   
+                    <ul class="fixed-menu__list" id="cd-vertical-nav">
+                        <li class="fixed-menu__list-item"><a href="#section1" data-number="1">
                             Свяжитесь с нами
                         </a></li>
-                        <li class="fixed-menu__list-item"><a href="">
+                        <li class="fixed-menu__list-item"><a href="#section2" data-number="2">
                             Расширенный курс
                         </a></li>
-                        <li class="fixed-menu__list-item"><a href="">
+                        <li class="fixed-menu__list-item"><a href="#section3" data-number="3">
                             Основной курс
                         </a></li>
-                        <li class="fixed-menu__list-item"><a href="">
+                        <li class="fixed-menu__list-item"><a href="#section4" data-number="4">
                             Введение
                         </a></li>
                     </ul>
-                    <a class="fixed-menu__button" href="#" >
-
+                    <a class="fixed-menu__button btn-border-gradient" href="#" >
+                      
                         <span class="fixed-menu__button-container">
                             <  AIR mailer
                         </span>
@@ -70,8 +71,8 @@
                                        </div>
                                   </div>
                                </div>
-
-
+                             
+                               
                            </div>
                            <div class="about-info__item-container">
                             <div class="about-info__item">
@@ -84,8 +85,8 @@
                                     </div>
                                </div>
                             </div>
-
-
+                          
+                            
                         </div>
                         <div class="about-info__item-container">
                             <div class="about-info__item">
@@ -94,13 +95,13 @@
                                     Осталось мест:
                                     </div>
                                     <div class="about-info__item-option">
-
+                                      
                                         14 из 30
                                     </div>
                                </div>
                             </div>
-
-
+                          
+                            
                         </div>
                         <div class="about-info__item-container">
                             <div class="about-info__item">
@@ -113,26 +114,27 @@
                                     </div>
                                </div>
                             </div>
-
-
+                          
+                            
                         </div>
                        </div>
                     </div>
-                       <section>
-                        <h3>
-                            Введение
-                        </h3>
-                        <ul>
-                            <li>Автор курса программист и спамер с опытом работы с 2005г, в партнерстве с известными партнерками.</li>
-                            <li>Единственный самый полный рабочий курс добывания трафика, с помощью массового e-mail маркетинга.</li>
-                            <li>Программа курса объемно покрывает отправку двумя самыми популярными способами генерирования спама.</li>
-                            <li>Овладев тремя самыми мощными программами (RDM,AMS,SS), вы научитесь отправлять миллионы целевых писем, генерируя десятки тысяч трафика ежедневно.</li>
-                            <li>Все инструменты: знания, софт, базы, партнерские программы.</li>
-                        </ul>
-                       </section>
+                       <section id="section4" class="cd-section">
+                        <section>
+                            <h3>
+                                Введение
+                            </h3>
+                            <ul>
+                                <li>Автор курса программист и спамер с опытом работы с 2005г, в партнерстве с известными партнерками.</li>
+                                <li>Единственный самый полный рабочий курс добывания трафика, с помощью массового e-mail маркетинга.</li>
+                                <li>Программа курса объемно покрывает отправку двумя самыми популярными способами генерирования спама.</li>
+                                <li>Овладев тремя самыми мощными программами (RDM,AMS,SS), вы научитесь отправлять миллионы целевых писем, генерируя десятки тысяч трафика ежедневно.</li>
+                                <li>Все инструменты: знания, софт, базы, партнерские программы.</li>
+                            </ul>
+                        </section>
                         <section>
                             <p>
-                                Успешные ученики получат возможность перерывами попробовать в работе нашими новейшие разработки автоматизация для отправки и очистки трафика, результат X10 при тех же усилиях.
+                                Успешные ученики получат возможность перерывами попробовать в работе нашими новейшие разработки автоматизация для отправки и очистки трафика, результат X10 при тех же усилиях.  
                             </p>
                             <div class="text-block inside-page__text-block">
                                <div class="text-block__content">
@@ -146,14 +148,16 @@
                             </div>
                             <div class="video-block">
                                 <div class="video-block__link-container">
-                                    <a class="video-block__link" href="#" style="background-image: url(img/1x/video-bg.png);"></a>
+                                    <a class="video-block__link popup-open" href="#video-modal" style="background-image: url(img/1x/video-bg.png);"></a>
                                 </div>
                                 <p>
                                     Процесс и результаты успешного прохождения курса, можно посмотреть в ускоренном видео.
                                 </p>
                             </div>
                         </section>
-                        <section>
+                       </section>
+                      
+                        <section id="section3" class="cd-section">
                             <h2>
                                 Основной курс
                             </h2>
@@ -177,7 +181,7 @@
                                 <li>Билет на доступ в лучший закрытый софт 2020 года</li>
                             </ul>
                         </section>
-                        <section>
+                        <section id="section2" class="cd-section">
                             <h2>
                                 Расширенный курс
                             </h2>
@@ -215,8 +219,8 @@
                                             </div>
                                        </div>
                                     </div>
-
-
+                                  
+                                    
                                 </div>
                                 <div class="about-info__item-container">
                                  <div class="about-info__item">
@@ -229,8 +233,8 @@
                                          </div>
                                     </div>
                                  </div>
-
-
+                               
+                                 
                              </div>
                              <div class="about-info__item-container">
                                  <div class="about-info__item">
@@ -239,13 +243,13 @@
                                          Осталось мест:
                                          </div>
                                          <div class="about-info__item-option">
-
+                                           
                                              14 из 30
                                          </div>
                                     </div>
                                  </div>
-
-
+                               
+                                 
                              </div>
                              <div class="about-info__item-container">
                                  <div class="about-info__item">
@@ -258,12 +262,12 @@
                                          </div>
                                     </div>
                                  </div>
-
-
+                               
+                                 
                              </div>
                             </div>
                          </div>
-                        <form class="inside-page__form" action="#">
+                        <form class="inside-page__form cd-section"  action="#" id="section1">
                           <div class="inside-page__form-head">
                               <div class="inside-page__form-title">
                                 Свяжитесь с нами
@@ -284,7 +288,7 @@
                                   </a>
                               </div>
                           </div>
-
+                           
                             <div class="inside-page__form-input-container">
                                 <label class="inside-page__form-label">
                                     Имя:
@@ -293,16 +297,16 @@
                                     <input type="text" name="name">
                                 </label>
                             </div>
-
+                          
                             <div class="inside-page__form-input-container">
                                 <label class="inside-page__form-label">
                                     Email:
                                 </label>
                                 <label class="inside-page__form-input">
-                                    <input type="email" name="email">
+                                    <input type="email" name="email"> 
                                 </label>
                             </div>
-
+                           
                             <button class="button inside-page__form-button">
                                 Отправить
                             </button>
@@ -708,6 +712,13 @@
             </div>
 
         </div>
+    </div>
+    <div id="video-modal" class="popup mfp-hide">
+        <div class="thumb-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A_MjCqQoLLA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/A_MjCqQoLLAE" frameborder="0" allowfullscreen></iframe> -->
+          </div>
+      
     </div>
 
 

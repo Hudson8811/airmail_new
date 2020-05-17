@@ -115,13 +115,15 @@
 
     .tabs-item-title:hover,
     .tabs-item-title.active {
+
         color: #473CC2;
-        color: linear-gradient(225.49deg, #D045AE 0%, #473CC2 98.79%);
     }
 
     .tabs-item-input:checked+.tabs-item-title {
+        background: linear-gradient(45deg, #D045AE 33%, #473CC2 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         color: #473CC2;
-        color: linear-gradient(225.49deg, #D045AE 0%, #473CC2 98.79%);
     }
 
     .tabs-item-input:checked+.tabs-item-title:before,
@@ -284,6 +286,7 @@
 }
 
 @media (max-width: 960px) {
+
     .header {
         padding-top: $p;
         height: 60px;
@@ -346,6 +349,8 @@
     .comparison {
         &-table {
             padding: 0;
+            transform: translateY(-270px);
+            margin-bottom: -250px;
 
             table {
                 display: none;
@@ -354,12 +359,28 @@
 
         &-tabs {
             display: block;
+            transform: translateY(0);
 
             &-hide {
-                padding: $p;
+                padding: 18px;
                 border-top: 0;
-                padding-bottom: 0;
                 display: none;
+                background: #fff;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                border-radius: 7px;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -2px;
+                    top: 0px;
+                    bottom: 0;
+                    width: 5px;
+                    background: #fff;
+                }
 
                 &.active {
                     display: block;
@@ -375,7 +396,13 @@
             }
 
             &-content {
-                padding-bottom: 0;
+                background-image: -webkit-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
+                background-image: -o-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
+                background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
+                padding: 2px;
+            }
+            &-title{
+                padding-right: 0;
             }
         }
     }
@@ -393,10 +420,23 @@
                     position: relative;
                     padding: 0;
                     transform: none;
-
+                    background: transparent;
                 }
 
             }
+
+            &-head{
+                padding-top: 30px;
+                padding-bottom: 300px;
+
+                h1, .h1{
+                    font-weight: 300;
+                    font-size: 26.67px;
+                    line-height: 35px;
+                }
+            }
+
+
         }
 
         &-text {
@@ -432,8 +472,10 @@
         }
 
         &-subtitle {
-            font-size: 12px;
+            font-size: 12px !important;
             line-height: 16px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         &-top {
@@ -460,6 +502,8 @@
 
                 .section-title {
                     text-align: center;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
                 }
             }
         }
@@ -885,6 +929,9 @@
                 margin-left: 0;
                 margin-right: 0;
                 min-height: 133px;
+                .benefit-item-logo img{
+                    max-width: 90px;
+                }
             }
 
             &-button {
@@ -995,6 +1042,8 @@
         &-article {
             text-align: center;
             margin-top: $p*2;
+            padding-left: 15px;
+            padding-right: 15px;
 
             &.text {
                 p {
@@ -1011,6 +1060,14 @@
             padding-top: $p*2;
             padding-bottom: $p*2;
 
+            &-wrap{
+                max-width: 290px;
+            }
+
+            .section-title{
+                margin-bottom: $p;
+            }
+
             .section-title .h1 br {
                 display: none;
             }
@@ -1020,15 +1077,15 @@
             }
 
             &-decor2 {
-                left: $p;
-                top: 308px;
+                left: 38px;
+                top: 265px;
                 width: 20px;
             }
 
             &-decor3 {
-                right: $p;
+                right: 13px;
                 max-width: 55px;
-                top: 223px;
+                top: 173px;
             }
         }
     }
@@ -1097,7 +1154,10 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
+    .morefunc-subtitle{
+        font-size: 12px;
+        line-height: 16px;
+    }
     .morefunc-block {
         flex-wrap: wrap;
         margin-top: 40px;

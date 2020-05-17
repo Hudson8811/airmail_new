@@ -397,7 +397,8 @@ a {
             margin-bottom: $p*3;
 
             &-free {
-                background-color: transparentize($dark2, .6);
+                background-color: transparentize($dark2, .8);
+                color: #727885;
 
                 .btn-subscribe {
                     background-color: $dark2;
@@ -406,7 +407,7 @@ a {
             }
 
             &-base {
-                background-color: transparentize($yellow, .6);
+                background-color: transparentize($yellow, .8);
                 color: $yellow;
 
                 .btn-subscribe {
@@ -416,7 +417,7 @@ a {
             }
 
             &-full {
-                background-color: transparentize($blue3, .6);
+                background-color: transparentize($blue3, .8);
                 color: $blue3;
 
                 .btn-subscribe {
@@ -433,6 +434,7 @@ a {
             text-transform: uppercase;
             display: flex;
             align-items: center;
+            
 
             .icon {
                 font-size: 26px;
@@ -493,7 +495,7 @@ a {
             cursor: pointer;
 
             &.current {
-                background-color: $blue;
+                background-color: #473CC2;
                 border-radius: 4px;
                 border-bottom: none;
                 color: #fff;
@@ -1061,7 +1063,7 @@ a {
     color: #fff;
     text-align: center;
     padding-top: $p*4;
-    padding-bottom: $p*3;
+    padding-bottom: $p/2;
 
     .evolutions-article>* {
         margin-left: auto;
@@ -1180,6 +1182,10 @@ a {
                         top: 50%;
                         margin-left: 0;
                     }
+
+                    &:hover{
+                        box-shadow: 0px 4px 16px rgba(208, 69, 174, 0.3);
+                    }
                 }
             }
 
@@ -1277,7 +1283,7 @@ a {
     &:before {
         content: '';
         position: absolute;
-        width: 900px;
+        width: 50vw;
         height: 360px;
         right: calc(50% + 60px);
         top: 50%;
@@ -1389,8 +1395,8 @@ a {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding-top: $p*.5;
-                padding-bottom: $p*.5;
+                padding-top: 12px;
+                padding-bottom: 11px;
             }
         }
     }
@@ -1407,7 +1413,8 @@ a {
         font-weight: 500;
         font-size: 14px;
         line-height: 18px;
-        color: transparentize($dark2, .5)
+        color: transparentize($dark2, .5);
+        flex-shrink: 0;
     }
 
     &-th {
@@ -1908,6 +1915,7 @@ a {
             &:checked {
                 +.create-checkbox-toggle {
                     filter: grayscale(0%);
+                    opacity: 1;
 
                     &:before {
                         left: calc(100% - 30px);
@@ -1926,6 +1934,7 @@ a {
             transition: all .3s;
             position: relative;
             margin-right: 16px;
+            opacity: 0.4;
 
             &:before {
                 content: '';
@@ -1945,6 +1954,7 @@ a {
 
 .footer {
     flex: 0 0 auto;
+    position: relative;
 
     &-bottom {
         background-color: $dark3;

@@ -2417,7 +2417,8 @@ button.mfp-close {
 
 .mCSB_inside > .mCSB_container {
   overflow-x: visible;
-  margin-right: 25px;
+  margin-right: 8px;
+  padding-right: 19px;
 }
 
 .mCSB_scrollTools.mCS-light.mCSB_scrollTools_vertical {

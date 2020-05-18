@@ -76,7 +76,11 @@
     &__content{
         margin: 0 230px 0 718px;
         max-width: 650px;
-        
+        .cd-section {
+            &__cost {
+                margin-top: 45px;
+            }
+        }
     }
     &__title{
         font-size: 35px;
@@ -156,7 +160,7 @@
         section + section{
             margin-top: 35px;
             padding-top: 35px;
-            border-top: 1px solid #9E9E9E;
+            border-top: 1px solid rgba(#9E9E9E, 0.5);
         }
     }
     &__text-block{

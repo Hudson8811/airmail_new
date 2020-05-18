@@ -629,12 +629,6 @@
   transition: .3s;
 }
 
-.about-info {
-  margin-top: 35px;
-  padding-top: 35px;
-  border-top: 1px solid #ECECEC;
-}
-
 .about-info__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -648,10 +642,21 @@
 }
 
 .about-info__item-container {
-  padding-right: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 25%;
+}
+
+.about-info__item-container:first-child .about-info__item,
+.about-info__item-container:first-child .about-info__item-content {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.about-info__item-container:last-child .about-info__item,
+.about-info__item-container:last-child .about-info__item-content {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .about-info__item {
@@ -661,7 +666,6 @@
   background-image: -webkit-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
   background-image: -o-linear-gradient(221.71deg, #D045AE 0%, #473CC2 98.79%);
   background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
-  border-radius: 4px;
 }
 
 .about-info__item-content {
@@ -680,7 +684,6 @@
   padding: 12px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .about-info__item-name {
@@ -721,16 +724,12 @@
 }
 
 .inside-page__content {
-  margin: 80px 0 0 100px;
+  margin: 80px 50px 0 100px;
 }
 
 @media (max-width: 1550px) {
-  .inside-page__content {
-    margin: 0 50px 0 618px;
-  }
   .fixed-menu {
     width: 518px;
-    padding: 40px 20px 20px 130px;
   }
 }
 
@@ -746,21 +745,23 @@
     width: 418px;
     padding: 40px 20px 20px 30px;
   }
-  .inside-page__content {
-    margin: 0 30px 0 450px;
-  }
 }
 
 @media (max-width: 1024px) {
   .fixed-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
     width: 100%;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     padding: 40px 20px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
   }
   .fixed-menu.active {
     -webkit-transform: none;
@@ -785,8 +786,7 @@
   }
   .inside-page__content {
     max-width: 100%;
-    margin: 0;
-    padding: 0 20px;
+    margin: 80px 50px 0 50px;
   }
   .inside-page__text-block {
     margin: 30px 0;

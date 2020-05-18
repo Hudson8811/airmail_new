@@ -78,7 +78,9 @@
         right: 0;
         top: -14px;
     }
-
+    .popup-video{
+        margin-top: 60px;
+    }
     .popup-configure {
         margin: 60px auto 0;
         max-height: calc(100vh - 120px);
@@ -371,7 +373,7 @@
                 border-radius: 7px;
                 position: relative;
 
-                &:after{
+                &:after {
                     content: '';
                     position: absolute;
                     left: 50%;
@@ -401,7 +403,8 @@
                 background-image: linear-gradient(228.29deg, #D045AE 0%, #473CC2 98.79%);
                 padding: 2px;
             }
-            &-title{
+
+            &-title {
                 padding-right: 0;
             }
         }
@@ -425,11 +428,12 @@
 
             }
 
-            &-head{
+            &-head {
                 padding-top: 30px;
                 padding-bottom: 300px;
 
-                h1, .h1{
+                h1,
+                .h1 {
                     font-weight: 300;
                     font-size: 26.67px;
                     line-height: 35px;
@@ -829,13 +833,18 @@
     }
 
     .mfp-content {
-        padding-top: 90px;
-
         .header-nav {
             display: flex;
 
+
         }
 
+        .opportunities-list2, .header-nav {
+            padding-top: 90px;
+        }
+        .opportunities-article, .popup-video{
+            margin-top: 90px;
+        }
         .opportunities {
             &-list2 {
                 display: block;
@@ -929,7 +938,8 @@
                 margin-left: 0;
                 margin-right: 0;
                 min-height: 133px;
-                .benefit-item-logo img{
+
+                .benefit-item-logo img {
                     max-width: 90px;
                 }
             }
@@ -1060,11 +1070,11 @@
             padding-top: $p*2;
             padding-bottom: $p*2;
 
-            &-wrap{
+            &-wrap {
                 max-width: 290px;
             }
 
-            .section-title{
+            .section-title {
                 margin-bottom: $p;
             }
 
@@ -1154,10 +1164,12 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    .morefunc-subtitle{
+
+    .morefunc-subtitle {
         font-size: 12px;
         line-height: 16px;
     }
+
     .morefunc-block {
         flex-wrap: wrap;
         margin-top: 40px;
@@ -1289,13 +1301,16 @@
     .create-item-input-y-n {
         width: 100%;
     }
-    .mCSB_inside > .mCSB_container{
+
+    .mCSB_inside>.mCSB_container {
         padding-right: 0;
     }
 
     .modal-create-range-slider {
         width: 100%;
-    }.modal-create-rangesliderv-wrap{
+    }
+
+    .modal-create-rangesliderv-wrap {
         width: calc(100% - 50px);
         margin: 0 auto;
     }
@@ -1314,9 +1329,10 @@
         margin-right: 0;
     }
 
-    .mfp-content {
-        padding-top: 10px;
-        padding-bottom: 10px;
+
+    .popup-configure{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -1337,6 +1353,7 @@
     .morefunc-compare-button-wrap {
         margin-top: 40px;
     }
+
     .create-item {
         padding-top: 10px;
         padding-bottom: 10px;

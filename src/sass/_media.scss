@@ -1289,9 +1289,15 @@
     .create-item-input-y-n {
         width: 100%;
     }
+    .mCSB_inside > .mCSB_container{
+        padding-right: 0;
+    }
 
-    .modal-create-range-slider,.modal-create-rangesliderv2 {
+    .modal-create-range-slider {
         width: 100%;
+    }.modal-create-rangesliderv-wrap{
+        width: calc(100% - 50px);
+        margin: 0 auto;
     }
 
     .create-item {

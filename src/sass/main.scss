@@ -2397,10 +2397,26 @@ button.mfp-close {
 }
 
 /////////////////////////
+.modal-create-rangesliderv-wrap{
+    width: 308px;
+    padding: 0 10px;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        top: 31px;
+        position: absolute;
+        height: 6px;
+        background: #E5E8ED;
+        border-radius: 3px;
+        right: 0;
+        width: 30px;
 
+    }
+}
 .modal-create-rangesliderv2 {
     position: relative;
-    width: 308px;
+    width: 100%;
     max-width: 100%;
     height: 6px;
     background: #E5E8ED;
@@ -2566,13 +2582,20 @@ button.mfp-close {
         background: linear-gradient(186.47deg, #D045AE 0%, #473CC2 98.79%);
         border-radius: 3px;
         height: 6px;
-        top: 31px;
+        top: 0;
+        position: absolute;
+        left: -10px;
     }
 
     input {
         width: 10px;
         padding: 0;
         border: 0;
+        outline: none;
+        &:focus{
+
+        outline: none;
+        }
     }
 }
 

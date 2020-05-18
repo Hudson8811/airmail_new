@@ -1237,6 +1237,7 @@
                 <div class="tabs-item-dropdown tabs-item-dropdown-plan">
 
                     <div class="create">
+                        <div class="rs-inp-buffer"></div>
                         <div class="create-title">Create Custom Monthly Plan</div>
                         <div class="create-list-wrap js-create-list-wrap">
                             <div class="create-list">
@@ -1313,11 +1314,41 @@
                                     </label>
                                     <div class="create-item-price"><span>250₽</span></div>
                                     <div class="create-item-input">
-                                        <input type="range" class="modal-create-rangeslider" data-min="0"
-                                            data-max="2000" data-from="25">
+                                        <div class="modal-create-rangesliderv-wrap">
+                                            <div class="modal-create-rangesliderv2"  data-min="0" data-max="2000">
+                                                <div class="modal-create-rangesliderv2-btn ui-slider-handle">
+                                                    <div class="modal-create-rangesliderv2-inp-wrap">
+                                                        <input type="text" value="5" name="scale-budget" class="modal-create-rangesliderv2_input js-allownumericwithoutdecimal"  onkeyup="this.value = this.value.replace(/[^\d]/g,'');this.style.width = ((this.value.length + 1) * 8) + 'px';">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+                                <div class="create-item create-item--with-range">
+                                    <label class="create-checkbox"><input type="checkbox" checked>
+                                        <span class="create-checkbox-toggle"></span>
+                                        <span class="create-item-text">
+                                            Number of automatic tests
 
+                                            <span class="create-subtitle">* We'll charge $5 for every 100,000 over-quota
+                                                volume.</span>
+                                        </span>
+                                    </label>
+                                    <div class="create-item-price"><span>250₽</span></div>
+                                    <div class="create-item-input">
+                                        <div class="modal-create-rangesliderv-wrap">
+                                            <div class="modal-create-rangesliderv2"  data-min="0" data-max="2000">
+                                                <div class="modal-create-rangesliderv2-btn ui-slider-handle">
+                                                    <div class="modal-create-rangesliderv2-inp-wrap">
+                                                        <input type="text" value="5" name="scale-budget" class="modal-create-rangesliderv2_input js-allownumericwithoutdecimal"  onkeyup="this.value = this.value.replace(/[^\d]/g,'');this.style.width = ((this.value.length + 1) * 8) + 'px';">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="create-item">
                                     <label class="create-checkbox"><input type="checkbox">
                                         <span class="create-checkbox-toggle"></span>
@@ -1391,22 +1422,6 @@
                                     </div>
                                 </div>
 
-                                <div class="create-item create-item--with-range">
-                                    <label class="create-checkbox"><input type="checkbox" checked>
-                                        <span class="create-checkbox-toggle"></span>
-                                        <span class="create-item-text">
-                                            Number of automatic tests
-
-                                            <span class="create-subtitle">* We'll charge $5 for every 100,000 over-quota
-                                                volume.</span>
-                                        </span>
-                                    </label>
-                                    <div class="create-item-price"><span>250₽</span></div>
-                                    <div class="create-item-input">
-                                        <input type="range" class="modal-create-rangeslider" data-min="0"
-                                            data-max="2000" data-from="25">
-                                    </div>
-                                </div>
 
                                 <div class="create-item">
                                     <label class="create-checkbox"><input type="checkbox">
@@ -1443,6 +1458,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>

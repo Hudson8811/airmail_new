@@ -3,7 +3,12 @@ $(document).ready(function () {
 
     $('.popup-open').magnificPopup({
         type: 'inline',
-        midClick: true
+        midClick: true,
+       /* callbacks: {
+        open: function() {
+            console.log($('.mfp-container').length);
+          }
+        }*/
     });
 
     var benefitItems = $('.benefit-item-price');
@@ -261,3 +266,5 @@ $('.fixed-menu__list-item a').click(function () {
 $(window).on("load", function () {
     $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
 });
+
+

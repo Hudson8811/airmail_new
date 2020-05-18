@@ -2867,6 +2867,10 @@ button.mfp-close {
   display: inline-block;
 }
 
+.popup-configure {
+  overflow: hidden;
+}
+
 .subscribe-type {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2973,6 +2977,9 @@ button.mfp-close {
     position: absolute;
     right: 0;
     top: -14px;
+  }
+  .popup-video {
+    margin-top: 60px;
   }
   .popup-configure {
     margin: 60px auto 0;
@@ -3255,7 +3262,8 @@ button.mfp-close {
     padding-top: 30px;
     padding-bottom: 300px;
   }
-  .section-page-head h1, .section-page-head .h1 {
+  .section-page-head h1,
+  .section-page-head .h1 {
     font-weight: 300;
     font-size: 26.67px;
     line-height: 35px;
@@ -3560,13 +3568,16 @@ button.mfp-close {
     font-size: 12px;
     line-height: 16px;
   }
-  .mfp-content {
-    padding-top: 90px;
-  }
   .mfp-content .header-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .mfp-content .opportunities-list2, .mfp-content .header-nav {
+    padding-top: 90px;
+  }
+  .mfp-content .opportunities-article, .mfp-content .popup-video {
+    margin-top: 90px;
   }
   .mfp-content .opportunities-list2 {
     display: block;
@@ -3988,9 +3999,9 @@ button.mfp-close {
   .create-list-wrap {
     margin-right: 0;
   }
-  .mfp-content {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .popup-configure {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 

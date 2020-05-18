@@ -434,7 +434,7 @@ a {
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            
+
 
             .icon {
                 font-size: 26px;
@@ -1065,6 +1065,7 @@ a {
     padding-top: $p*4;
     padding-bottom: $p/2;
 
+
     .evolutions-article>* {
         margin-left: auto;
         margin-right: auto;
@@ -1085,7 +1086,8 @@ a {
         margin-left: 20px;
         margin-right: 20px;
         background-color: #fff;
-        padding: $p*3;
+       // padding: $p*3;
+        padding: 60px 20px;
         height: 320px;
         flex: 0 0 320px;
         border-radius: 8px;

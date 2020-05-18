@@ -1208,7 +1208,7 @@ a:hover {
   margin-left: 20px;
   margin-right: 20px;
   background-color: #fff;
-  padding: 60px;
+  padding: 60px 20px;
   height: 320px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 320px;

@@ -98,7 +98,7 @@ $(document).ready(function () {
     });
 
     $('.comparison-tabs-head-item').click(function () {
-        if($(window).width() < 960 && (!$(this).hasClass('active')) ){
+        if ($(window).width() < 960 && (!$(this).hasClass('active'))) {
             let tabsComparison = $(this).data('tabs');
             $('.comparison-tabs-head-item, .comparison-tabs-hide').removeClass('active');
 
@@ -186,6 +186,59 @@ jQuery(document).ready(function ($) {
             600
         );
     }
+    /////////////////////////
+
+
+
+    var buffer = $('.rs-inp-buffer');
+
+    $(".modal-create-rangesliderv2").each(function () {
+        let $this = $(this);
+        let min = parseInt($this.data('min'));
+        let max = parseInt($this.data('max'));
+
+        $this.slider({
+            animate: true,
+            range: "min",
+            value: 5,
+            min: min,
+            max: max,
+            step: 5,
+            slide: function (event, ui) {
+                buffer.text(ui.value);
+                $(this).find('.modal-create-rangesliderv2_input').val(ui.value).width(buffer.width());
+
+            }
+        });
+    });
+
+    $(".modal-create-rangesliderv2_input").blur(function () {
+        $(this).val($(this).closest('.modal-create-rangesliderv2').slider("value"));
+    });
+
+    $(".modal-create-rangesliderv2_input").keyup(function () {
+        var parent = $(this).closest('.modal-create-rangesliderv2');
+
+        let sum = $(this).val();
+
+        if (sum < parseInt(parent.attr('data-min'))) {
+            sum = parseInt(parent.attr('data-min'));
+        }
+
+        console.log(sum + '=' + parent.attr('data-max'));
+        if (sum > parseInt(parent.attr('data-max'))) {
+            sum = parseInt(parent.attr('data-max'));
+        }
+
+        parent.slider("value", sum);
+        //$(this).val(sum);
+    });
+
+    $(".modal-create-rangesliderv2_input").on('input change blur keyup', function () {
+        var buffer = $('.rs-inp-buffer');
+        buffer.text($(this).val());
+        $(this).css('width', buffer.width());
+    });
 });
 
 

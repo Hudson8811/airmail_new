@@ -67,16 +67,19 @@
 
 
 .inside-page{
-
+    display: flex;
     &__hamburger{
         display: none;
     }
-   padding-top: 60px;
     background-color: #FFFFFF;
     &__content{
         margin: 0 230px 0 718px;
         max-width: 650px;
-        
+        .cd-section {
+            &__cost {
+                margin-top: 45px;
+            }
+        }
     }
     &__title{
         font-size: 35px;
@@ -137,6 +140,13 @@
                 }
             }
         }
+
+        #section2,
+        #section3 {
+            margin-top: 35px;
+            padding-top: 35px;
+            border-top: 1px solid #ECECEC;
+        }
        
         section{
             >  h2{
@@ -152,11 +162,6 @@
                 margin-bottom: 30px;
             }
            
-        }
-        section + section{
-            margin-top: 35px;
-            padding-top: 35px;
-            border-top: 1px solid #9E9E9E;
         }
     }
     &__text-block{
@@ -309,13 +314,14 @@
 
 }
 .fixed-menu{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     height: 100%;
-    width: 618px;
+    width: 100%;
+    max-width: 618px;
     box-sizing: border-box;
-    padding: 40px 20px 20px 230px;
+    padding: 40px 20px 439px 230px;
     z-index: 900;
     background-color: #1B1F26;
 
@@ -401,6 +407,7 @@
             color: rgba(#fff, .5);
             font-weight: 600;
             transition: .3s;
+            text-transform: uppercase;
 
             &:hover,&.is-selected{
                 color: #fff;
@@ -412,6 +419,7 @@
 .contacts-us{
     display: flex;
     align-items: center;
+    text-align: right;
     &__title{
         font-size: 12px;
         line-height: 14px;
@@ -423,7 +431,6 @@
         line-height: 17px;
         color: #34ACE0;
         text-transform: uppercase;
-        margin-left: -10px;
     }
     &__image-container{
         margin-left: 15px;
@@ -503,6 +510,10 @@
     }
 }
 .about-info{
+    margin-top: 35px;
+    padding-top: 35px;
+    border-top: 1px solid #ECECEC;
+
     &__row{
         display: flex;
         align-items: center;
@@ -567,7 +578,12 @@
         outline-width: 0;
     }
   }
- 
+
+.inside-page{
+    &__content{
+        margin: 80px 0 0 100px;
+    }
+}
 
 @media (max-width: 1550px){
     .inside-page{
@@ -762,5 +778,8 @@
         }
     }
 }
+
+
+
 
 

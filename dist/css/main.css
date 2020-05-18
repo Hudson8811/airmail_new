@@ -4204,6 +4204,10 @@ button.mfp-close {
   max-width: 650px;
 }
 
+.inside-page__content .cd-section__cost {
+  margin-top: 45px;
+}
+
 .inside-page__title {
   font-size: 35px;
   line-height: 40px;
@@ -4282,7 +4286,7 @@ button.mfp-close {
 .inside-page__content section + section {
   margin-top: 35px;
   padding-top: 35px;
-  border-top: 1px solid #9E9E9E;
+  border-top: 1px solid rgba(158, 158, 158, 0.5);
 }
 
 .inside-page__text-block {

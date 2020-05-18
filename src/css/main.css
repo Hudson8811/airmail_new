@@ -818,13 +818,17 @@ a:hover {
 }
 
 .opportunities-list1 .opportunities-link-ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60px;
           flex: 0 0 60px;
   width: 60px;
   height: 60px;
-  background-color: #E5E8ED;
-  border-radius: 50%;
 }
 
 .opportunities-list2 {
@@ -4191,7 +4195,9 @@ button.mfp-close {
 }
 
 .inside-page {
-  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #FFFFFF;
 }
 
@@ -4202,6 +4208,10 @@ button.mfp-close {
 .inside-page__content {
   margin: 0 230px 0 718px;
   max-width: 650px;
+}
+
+.inside-page__content .cd-section__cost {
+  margin-top: 45px;
 }
 
 .inside-page__title {
@@ -4265,6 +4275,13 @@ button.mfp-close {
   top: 0;
 }
 
+.inside-page__content #section2,
+.inside-page__content #section3 {
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: 1px solid #ECECEC;
+}
+
 .inside-page__content section > h2 {
   font-size: 36px;
   line-height: 39px;
@@ -4277,12 +4294,6 @@ button.mfp-close {
   line-height: 27px;
   font-weight: 600;
   margin-bottom: 30px;
-}
-
-.inside-page__content section + section {
-  margin-top: 35px;
-  padding-top: 35px;
-  border-top: 1px solid #9E9E9E;
 }
 
 .inside-page__text-block {
@@ -4459,14 +4470,15 @@ button.mfp-close {
 }
 
 .fixed-menu {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;
-  width: 618px;
+  width: 100%;
+  max-width: 618px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 40px 20px 20px 230px;
+  padding: 40px 20px 439px 230px;
   z-index: 900;
   background-color: #1B1F26;
 }
@@ -4564,6 +4576,7 @@ button.mfp-close {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  text-transform: uppercase;
 }
 
 .fixed-menu__list-item a:hover, .fixed-menu__list-item a.is-selected {
@@ -4577,6 +4590,7 @@ button.mfp-close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: right;
 }
 
 .contacts-us__title {
@@ -4591,7 +4605,6 @@ button.mfp-close {
   line-height: 17px;
   color: #34ACE0;
   text-transform: uppercase;
-  margin-left: -10px;
 }
 
 .contacts-us__image-container {
@@ -4689,6 +4702,12 @@ button.mfp-close {
   transition: .3s;
 }
 
+.about-info {
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: 1px solid #ECECEC;
+}
+
 .about-info__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4772,6 +4791,10 @@ button.mfp-close {
   height: 100%;
   border-width: 0;
   outline-width: 0;
+}
+
+.inside-page__content {
+  margin: 80px 0 0 100px;
 }
 
 @media (max-width: 1550px) {

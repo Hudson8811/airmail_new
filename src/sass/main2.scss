@@ -314,7 +314,7 @@
 
 }
 .fixed-menu{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     height: 100%;
@@ -515,8 +515,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-right: -20px;
-
     }
     &__item-container{
         box-sizing: border-box;
@@ -594,7 +592,7 @@
 
 .inside-page{
     &__content{
-        margin: 80px 50px 0 718px;
+        margin: 50px 0 0 100px;
 
         p {
             &:last-of-type {
@@ -611,7 +609,7 @@
 
     .inside-page{
         &__content{
-            margin-left: 618px;
+            margin-left: 60px;
         }
     }
 }
@@ -643,7 +641,7 @@
 
     .inside-page{
         &__content{
-            margin-left: 618px;
+            margin-left: 60px;
         }
     }
 }
@@ -655,7 +653,7 @@
 
     .inside-page{
         &__content{
-            margin-left: 518px;
+            margin-left: 60px;
         }
     }
 }

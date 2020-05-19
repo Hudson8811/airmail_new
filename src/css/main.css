@@ -4482,7 +4482,7 @@ button.mfp-close {
 }
 
 .fixed-menu {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -4809,7 +4809,7 @@ button.mfp-close {
 }
 
 .inside-page__content {
-  margin: 80px 50px 0 100px;
+  margin: 80px 50px 0 718px;
 }
 
 .inside-page__content p:last-of-type {
@@ -4819,6 +4819,9 @@ button.mfp-close {
 @media (max-width: 1550px) {
   .fixed-menu {
     width: 518px;
+  }
+  .inside-page__content {
+    margin-left: 618px;
   }
 }
 
@@ -4830,12 +4833,18 @@ button.mfp-close {
     width: 50%;
     margin-bottom: 20px;
   }
+  .inside-page__content {
+    margin-left: 618px;
+  }
 }
 
 @media (max-width: 1150px) {
   .fixed-menu {
     width: 418px;
     padding: 40px 20px 439px 30px;
+  }
+  .inside-page__content {
+    margin-left: 518px;
   }
 }
 

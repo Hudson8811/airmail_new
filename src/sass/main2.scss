@@ -314,7 +314,7 @@
 
 }
 .fixed-menu{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -590,7 +590,7 @@
 
 .inside-page{
     &__content{
-        margin: 80px 50px 0 100px;
+        margin: 80px 50px 0 718px;
 
         p {
             &:last-of-type {
@@ -604,6 +604,12 @@
     .fixed-menu{
         width: 518px;
     }
+
+    .inside-page{
+        &__content{
+            margin-left: 618px;
+        }
+    }
 }
 @media (max-width: 1250px){
     .fixed-menu{
@@ -616,11 +622,23 @@
             margin-bottom: 20px;
         }
     }
+
+    .inside-page{
+        &__content{
+            margin-left: 618px;
+        }
+    }
 }
 @media (max-width: 1150px){
     .fixed-menu{
         width: 418px;
         padding: 40px 20px 439px 30px;
+    }
+
+    .inside-page{
+        &__content{
+            margin-left: 518px;
+        }
     }
 }
 @media (max-width: 1024px){

@@ -36,6 +36,10 @@ $(document).ready(function () {
             $('.opportunities-list1 .opportunities-link, .opportunities-list2, .opportunities-list2 .opportunities-link, .opportunities-article').removeClass('active');
             $(this).addClass('active');
             $(tabsOpportunities).addClass('active');
+            var tabs = $(tabsOpportunities).find('.opportunities-link');
+            if (tabs.length){
+                tabs[0].click();
+            }
             return false;
         }
     });

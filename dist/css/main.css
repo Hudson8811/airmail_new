@@ -2925,6 +2925,9 @@ button.mfp-close {
 }
 
 @media (max-width: 1400px) {
+  .popup-video {
+    margin-top: calc(50vh - 300px);
+  }
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -2979,7 +2982,7 @@ button.mfp-close {
     top: -14px;
   }
   .popup-video {
-    margin-top: 60px;
+    margin-top: calc(50vh - 290px);
   }
   .popup-configure {
     margin: 60px auto 0;
@@ -3134,6 +3137,9 @@ button.mfp-close {
 }
 
 @media (max-width: 960px) {
+  .popup-video {
+    margin-top: calc(50vh - 265px);
+  }
   .header {
     padding-top: 20px;
     height: 60px;
@@ -3576,9 +3582,6 @@ button.mfp-close {
   .mfp-content .opportunities-list2, .mfp-content .header-nav {
     padding-top: 90px;
   }
-  .mfp-content .opportunities-article, .mfp-content .popup-video {
-    margin-top: 90px;
-  }
   .mfp-content .opportunities-list2 {
     display: block;
   }
@@ -4006,6 +4009,9 @@ button.mfp-close {
 }
 
 @media (max-width: 768px) {
+  .popup-video {
+    margin-top: calc(50vh - 210px);
+  }
   .morefunc-block {
     margin-bottom: -20px;
   }
@@ -4026,6 +4032,9 @@ button.mfp-close {
 }
 
 @media (max-width: 500px) {
+  .popup-video {
+    margin-top: calc(50vh - 140px);
+  }
   .morefunc-b-item {
     padding: 20px;
   }
@@ -4038,6 +4047,9 @@ button.mfp-close {
 }
 
 @media (max-width: 365px) {
+  .popup-video {
+    margin-top: calc(50vh - 100px);
+  }
   .tabs-item-title {
     font-size: 11px;
     margin-right: 5px;

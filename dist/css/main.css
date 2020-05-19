@@ -1417,7 +1417,6 @@ a:hover {
 
 .cloud-item-text {
   color: #727885;
-  font-weight: 600;
 }
 
 .automation {
@@ -2097,10 +2096,6 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.create-item:last-child {
-  border-bottom: 1px solid #E5E8ED;
 }
 
 .create-item-input input {
@@ -3114,6 +3109,7 @@ button.mfp-close {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    border-top: 1px solid #E5E8ED;
   }
   .create-bottom-total {
     margin-right: 24px;
@@ -4235,7 +4231,11 @@ button.mfp-close {
 }
 
 .inside-page__content .cd-section__cost {
-  margin-top: 45px;
+  margin-top: 30px;
+}
+
+.inside-page__content .cd-section__cost span {
+  font-size: 20px;
 }
 
 .inside-page__title {
@@ -4250,7 +4250,8 @@ button.mfp-close {
 }
 
 .inside-page__about-info--top {
-  margin: 48px 0 50px;
+  margin: 40px 0;
+  width: calc(100% + 20px);
 }
 
 .inside-page__subtitle-info {
@@ -4272,7 +4273,7 @@ button.mfp-close {
 }
 
 .inside-page__content p + p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .inside-page__content ul {
@@ -4301,8 +4302,8 @@ button.mfp-close {
 
 .inside-page__content #section2,
 .inside-page__content #section3 {
-  margin-top: 35px;
-  padding-top: 35px;
+  margin-top: 40px;
+  padding-top: 40px;
   border-top: 1px solid #ECECEC;
 }
 
@@ -4321,17 +4322,13 @@ button.mfp-close {
 }
 
 .inside-page__text-block {
-  margin: 60px 0;
+  margin: 40px 0;
 }
 
 .inside-page__form {
-  margin: 100px 0 80px;
+  margin-bottom: 80px;
   padding-top: 40px;
   border-top: 1px solid #ECECEC;
-}
-
-.inside-page__form.cd-section {
-  padding-bottom: 80px;
 }
 
 .inside-page__form-down-file {
@@ -4387,9 +4384,8 @@ button.mfp-close {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ECECEC;
+  padding: 30px 0;
+  border-top: 1px solid #ECECEC;
 }
 
 .inside-page__form-input-container {
@@ -4490,7 +4486,7 @@ button.mfp-close {
 }
 
 .inside-page__form-button:hover {
-  opacity: .5;
+  background-color: #ffe4a5;
 }
 
 .fixed-menu {
@@ -4498,7 +4494,7 @@ button.mfp-close {
   position: sticky;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 618px;
   -webkit-box-sizing: border-box;
@@ -4511,7 +4507,7 @@ button.mfp-close {
 .fixed-menu__logo {
   height: 32px;
   width: 109px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .fixed-menu__logo-image {
@@ -4584,11 +4580,11 @@ button.mfp-close {
 .fixed-menu__image {
   position: absolute;
   right: 60px;
-  bottom: 60px;
+  top: 467px;
 }
 
 .fixed-menu__list-item + .fixed-menu__list-item {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .fixed-menu__list-item a {
@@ -4616,38 +4612,79 @@ button.mfp-close {
       -ms-flex-align: center;
           align-items: center;
   text-align: right;
+  width: 254px;
+  height: 72px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 152, 199, 0.1);
+  border-radius: 8px;
+}
+
+.contacts-us__content {
+  margin-left: 16px;
 }
 
 .contacts-us__title {
-  font-size: 12px;
-  line-height: 14px;
-  color: #9E9E9E;
+  font-size: 11px;
+  line-height: 16px;
+  color: #0098C7;
   font-weight: 300;
 }
 
 .contacts-us__link {
   font-size: 14px;
-  line-height: 17px;
-  color: #34ACE0;
+  line-height: 18px;
+  color: #0098C7;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .contacts-us__image-container {
-  margin-left: 15px;
   height: 40px;
   width: 40px;
   border-radius: 4px;
+  position: relative;
+}
+
+.contacts-us__image-container::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 40px;
+  background-color: #0098C7;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
 }
 
 .contacts-us__image {
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 21px;
+  width: 24px;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: left;
+     object-position: left;
   border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.contacts-us__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 14px;
+  height: 42px;
+}
+
+.contacts-us__avatar-img {
+  width: 100%;
+  height: 100%;
 }
 
 .text-block {
@@ -4828,10 +4865,6 @@ button.mfp-close {
   margin: 50px 0 0 100px;
 }
 
-.inside-page__content p:last-of-type {
-  margin-top: 30px;
-}
-
 @media (max-width: 1550px) {
   .fixed-menu {
     width: 518px;
@@ -4898,9 +4931,10 @@ button.mfp-close {
             transform: none;
     z-index: 9400;
     max-width: 100%;
+    height: 100vh;
   }
   .fixed-menu__image {
-    right: 20px;
+    left: 60px;
     bottom: 20px;
   }
   .inside-page {
@@ -5053,7 +5087,7 @@ button.mfp-close {
 }
 
 .footer-inside {
-  background-color: #000;
+  background-color: #121211;
   padding: 60px 0;
 }
 
@@ -5129,7 +5163,7 @@ button.mfp-close {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  background-color: #000;
+  background-color: #121211;
 }
 
 .footer-inside__partners-item--big {
@@ -5203,10 +5237,7 @@ button.mfp-close {
         -ms-transform: none;
             transform: none;
     z-index: 9400;
-  }
-  .fixed-menu__image {
-    right: 0;
-    bottom: 0;
+    height: 100vh;
   }
   .footer-inside__content {
     max-width: 100%;
@@ -5266,6 +5297,10 @@ button.mfp-close {
 }
 
 @media (max-width: 768px) {
+  .fixed-menu__image {
+    left: 30px;
+    bottom: 20px;
+  }
   .footer-inside {
     padding: 30px 0;
   }
@@ -5316,6 +5351,10 @@ button.mfp-close {
 }
 
 @media (max-width: 500px) {
+  .fixed-menu__image {
+    left: 0;
+    bottom: 20px;
+  }
   .footer-inside {
     padding: 30px 0 10px;
   }
@@ -5368,7 +5407,7 @@ button.mfp-close {
   .about-info__item-container {
     width: 100%;
   }
-  .about-info__item-container:last-child() {
+  .about-info__item-container:last-child {
     margin-bottom: 0;
   }
 }

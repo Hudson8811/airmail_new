@@ -392,8 +392,8 @@
     }
     &__image{
         position: absolute;
-        right: 60px;
-        top: 467px;
+        right: 68px;
+        bottom: 68px;
     }
     &__list-item{
         & + &{
@@ -708,10 +708,6 @@
             max-width: 100%;
             height: 100vh;
         }
-        &__image{
-            left: 60px;
-            bottom: 20px;
-        }
     }
     .inside-page{
         
@@ -1003,7 +999,7 @@
 @media (max-width: 1024px){
 
     .fixed-menu{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         transform:  translateX(-100%);
@@ -1091,12 +1087,6 @@
 
 
 @media (max-width: 768px){
-    .fixed-menu{
-        &__image{
-            left: 30px;
-            bottom: 20px;
-        }
-    }
     .footer-inside{
         padding: 30px 0;
         &__title{
@@ -1153,13 +1143,6 @@
 
 }
 @media (max-width: 500px){
-    .fixed-menu{
-        &__image{
-            left: 0;
-            bottom: 20px;
-        }
-    }
-
     .footer-inside{
         padding: 30px 0 10px;
         &__partners{
@@ -1197,6 +1180,12 @@
     }
 }
 @media (max-width: 450px){
+    .fixed-menu {
+        &__image{
+            right: 10px;
+        }
+    }
+
     .footer-inside{
         &__partners-item-container{
             width: 100%;

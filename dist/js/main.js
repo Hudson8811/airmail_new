@@ -140,6 +140,7 @@ $(document).ready(function () {
 
 
     $(".inside-page__hamburger").click(function () {
+        !$(this).hasClass("is-active") ? $("body").css("overflow","hidden") : $("body").css("overflow","auto");
         $(this).toggleClass("is-active");
         $(".fixed-menu").toggleClass('active');
     });

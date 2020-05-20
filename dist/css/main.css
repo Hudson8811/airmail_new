@@ -1894,10 +1894,7 @@ a:hover {
 }
 
 .section-top {
-  background-position: bottom center;
   text-align: center;
-  background-image: url(../img/main-background.png);
-  background-repeat: no-repeat;
   background-color: #1B1F26;
   color: #fff;
   height: 840px;

@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/MotionPathPlugin.min.js"></script>
+    <link rel="stylesheet" href="css/animated-bg.css">
 
 
 </head>
@@ -62,7 +65,205 @@
 
                     </div>
                 </div>
+                <div class="animated-bg">
+                    <svg version="1.1" id="Features-SVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2005.4 777" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="Features-dropletLineGradient" gradientUnits="userSpaceOnUse" x1="977.4597" y1="777.3409" x2="977.4597" y2="510.8409">
+                                <stop offset="0" style="stop-color:#fff;stop-opacity:0.1"/>
+                                <stop offset="1" style="stop-color:#fff;stop-opacity:0.1"/>
+                            </linearGradient>
 
+                        </defs>
+
+                        <style type="text/css">
+                            .Features-gradientGroup1 {
+                                opacity: 0;
+                            }
+                            .Features-gradientGroup2 {
+                               opacity: 0;
+                            }
+                            .Features-bottomGradientShape,
+                            .Features-innerGradientShape {
+                                fill: #ffffff;
+                            }
+                            .Features-dottedWaveShape {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 1.5;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-dasharray: 0,5;
+                                opacity: 0.1;
+                            }
+                            .Features-blueStroke {
+                                fill: none;
+                                stroke:#FFFFFF;
+                                opacity: 0.4;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                            }
+                            .Features-dropletLine {
+                                fill: none;
+                                stroke: url(#Features-dropletLineGradient);
+                                stroke-width: 1.5;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-dasharray: 0,5;
+                            }
+                            .Features-whiteWaveLine {
+                                fill: none;
+                                stroke: #1B1F26;
+                                stroke-width: 16;
+                                stroke-miterlimit: 10;
+                            }
+                            .Features-dot {
+                                fill: #ffffff;
+                            }
+                            .eman{
+                                opacity: 0.2;
+                                transform: translateX(-0.16%) translateY(-0.5%);
+                            }
+                            .fman{
+                                opacity: 0.5;
+                                fill: #ffffff;
+
+                            }
+                        </style>
+
+                        <g id="Gradient_Wave_Fill">
+                            <g class="Features-gradientGroup Features-gradientGroup1">
+                                <path class="Features-bottomGradientShape" d="M1917.4,109.1c-45.4,45.3-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32s-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30l-0.2,64h1999v-711C1998.4,65.3,1961,65.6,1917.4,109.1z"/>
+                                <path class="Features-innerGradientShape" d="M1916.4,109.1c-45.4,45.3-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32c-51,0-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30l-0.2,64h2000v-711C1998.4,65.3,1960,65.6,1916.4,109.1z"/>
+                            </g>
+                            <g class="Features-gradientGroup Features-gradientGroup2">
+                                <path class="Features-bottomGradientShape" d="M1917.4,109.1c-45.4,45.3-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32s-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30l-0.2,64h1999v-711C1998.4,65.3,1961,65.6,1917.4,109.1z"/>
+                                <path class="Features-innerGradientShape" d="M1916.4,109.1c-45.4,45.3-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32c-51,0-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30l-0.2,64h2000v-711C1998.4,65.3,1960,65.6,1916.4,109.1z"/>
+                            </g>
+                        </g>
+
+                        <g id="Background_Dotted_Wave">
+                            <path class="Features-dottedWaveShape" d="M1.6,748.4c95.2,0,78.8-77,147.3-88c37-5.9,58,22,90.7,22c59,0,78.4-145.9,121.4-145.9c42,0,71.2,162,125.6,162c50,0,55-104,87-104c33,0,32,30.3,72,30.3c53,0,83.1-88.4,166.5-88.4c80.1,0,99.4,84.1,148.5,97.7c52,14.4,94-43.2,137-43.2s49,31.4,92,31.4c63,0,76-113.3,141-133.2c43-13.2,62,19.6,99,19.6c87,0,111-182.5,193-182.5c59,0,71.2-202.3,136-217.2c46.8-10.7,89.8,13.3,136.8-29.7c44.8-41,68.4-64,106.2-64"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-1">
+                            <g class="eman">
+                                <path class="fman" d="M221.15,603.7a3.48,3.48,0,1,0-3.48-3.48A3.47,3.47,0,0,0,221.15,603.7Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,221.15,598.21Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M217.15,608.83a2.71,2.71,0,0,1,2.71-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.45v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M223.73,609.13h1.45v-1.8a3.08,3.08,0,0,1,3.07-3.07h2.82a3.08,3.08,0,0,1,3.07,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2-3.79,4.48,4.48,0,0,0-2.48-.74h-2.82a4.52,4.52,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M239.45,604.65h-2.76a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.7a2.71,2.71,0,0,1,2.71,2.71v.3h1.45v-.3A4.18,4.18,0,0,0,239.45,604.65Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M238.17,603.7a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,238.17,603.7Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,238.17,598.21Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M229.66,602.22a4.38,4.38,0,1,0-4.38-4.38A4.38,4.38,0,0,0,229.66,602.22Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,229.66,594.92Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="229.7" y1="609.6" x2="229.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-2">
+                            <g class="eman">
+                                <path class="fman" d="M479.19,626.66a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,479.19,626.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,479.19,621.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M475.2,631.79a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0H477.9a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M481.77,632.09h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07h2.83a3.07,3.07,0,0,1,3.06,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2.05-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M497.5,627.61h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,497.5,627.61Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M496.22,626.66a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,496.22,626.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,496.22,621.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M487.7,625.18a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,487.7,625.18Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,487.7,617.88Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="487.7" y1="635.7" x2="487.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-3">
+                            <g class="eman">
+                                <path class="fman" d="M643.19,570.66a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,643.19,570.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,643.19,565.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M639.2,575.79a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0H641.9a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M645.77,576.09h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07h2.83a3.07,3.07,0,0,1,3.06,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M661.5,571.61h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,661.5,571.61Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M660.22,570.66a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,660.22,570.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,660.22,565.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M651.7,569.18a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,651.7,569.18Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,651.7,561.88Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="651.7" y1="582.6" x2="651.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-4">
+                            <g class="eman">
+                                <path class="fman" d="M969.65,506.16a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,969.65,506.16Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,969.65,500.67Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M965.65,511.29a2.71,2.71,0,0,1,2.71-2.71h2.78a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.38,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.45v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M972.22,511.59h1.46v-1.8a3.08,3.08,0,0,1,3.07-3.07h2.82a3.08,3.08,0,0,1,3.07,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2.05-3.79,4.48,4.48,0,0,0-2.48-.74h-2.82a4.54,4.54,0,0,0-4.53,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M988,507.11h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2H988a2.71,2.71,0,0,1,2.71,2.71v.3h1.45v-.3A4.18,4.18,0,0,0,988,507.11Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M986.67,506.16a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,986.67,506.16Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,986.67,500.67Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M978.15,504.68a4.38,4.38,0,1,0-4.37-4.38A4.39,4.39,0,0,0,978.15,504.68Zm0-7.3a2.91,2.91,0,1,1-2.9,2.91A2.91,2.91,0,0,1,978.15,497.38Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="977.5" y1="511.6" x2="977.5" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-5">
+                            <g class="eman">
+                                <path class="fman" d="M1188.19,546.56a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,1188.19,546.56Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1188.19,541.07Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1184.2,551.69a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1190.77,552h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07h2.83a3.07,3.07,0,0,1,3.06,3.07V552h1.46v-1.8a4.53,4.53,0,0,0-2.05-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1206.5,547.51h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,1206.5,547.51Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1205.22,546.56a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,1205.22,546.56Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1205.22,541.07Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1196.7,545.08a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,1196.7,545.08Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,1196.7,537.78Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="1196.7" y1="552.3" x2="1196.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-6">
+                            <g class="eman">
+                                <path class="fman" d="M1420.19,425.67a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,1420.19,425.67Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1420.19,420.18Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1416.2,430.8a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1422.77,431.1h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07h2.83a3.07,3.07,0,0,1,3.06,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2.05-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1438.5,426.62h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,1438.5,426.62Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1437.22,425.67a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,1437.22,425.67Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1437.22,420.18Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1428.7,424.19a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,1428.7,424.19Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,1428.7,416.89Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="1428.7" y1="432.6" x2="1428.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-7">
+                            <g class="eman">
+                                <path class="fman" d="M1486.39,306.16a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,1486.39,306.16Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1486.39,300.67Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1482.39,311.29a2.71,2.71,0,0,1,2.71-2.71h2.79a.75.75,0,0,0,.57-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.64-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.45v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1489,311.59h1.46v-1.8a3.08,3.08,0,0,1,3.07-3.07h2.82a3.08,3.08,0,0,1,3.07,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2-3.79,4.48,4.48,0,0,0-2.48-.74h-2.82a4.54,4.54,0,0,0-4.53,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1504.69,307.11h-2.77a.72.72,0,0,0-.69.73.72.72,0,0,0,.76.73h2.71a2.71,2.71,0,0,1,2.71,2.71v.3h1.45v-.3A4.18,4.18,0,0,0,1504.69,307.11Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1503.41,306.16a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,1503.41,306.16Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1503.41,300.67Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1494.89,304.68a4.38,4.38,0,1,0-4.37-4.38A4.39,4.39,0,0,0,1494.89,304.68Zm0-7.3a2.91,2.91,0,1,1-2.9,2.91A2.91,2.91,0,0,1,1494.89,297.38Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="1494.7" y1="318.6" x2="1494.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-8">
+                            <g class="eman">
+                                <path class="fman" d="M1632.19,156a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,1632.19,156Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1632.19,150.47Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1628.2,161.09a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1634.77,161.39h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07h2.83a3.07,3.07,0,0,1,3.06,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2.05-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1650.5,156.91h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,1650.5,156.91Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1649.22,156a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,1649.22,156Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1649.22,150.47Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1640.7,154.48a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,1640.7,154.48Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,1640.7,147.18Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="1640.7" y1="167.6" x2="1640.7" y2="776.6"/>
+                        </g>
+                        <g class="Features-dropletLineGroup" id="Features-dropletLine-9">
+                            <g class="eman">
+                                <path class="fman" d="M1850.09,61.66a3.48,3.48,0,1,0-3.47-3.48A3.48,3.48,0,0,0,1850.09,61.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1850.09,56.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1846.1,66.79a2.71,2.71,0,0,1,2.7-2.71h2.79a.77.77,0,0,0,.58-.19.72.72,0,0,0,.23-.53.74.74,0,0,0-.65-.73l-.39,0h-2.56a4.18,4.18,0,0,0-4.17,4.18v.3h1.46v-.31Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1852.67,67.09h1.46v-1.8a3.07,3.07,0,0,1,3.06-3.07H1860a3.07,3.07,0,0,1,3.06,3.07v1.8h1.46v-1.8a4.53,4.53,0,0,0-2-3.79,4.42,4.42,0,0,0-2.47-.74h-2.83a4.54,4.54,0,0,0-4.52,4.53Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1868.4,62.61h-2.77a.73.73,0,0,0-.7.73.7.7,0,0,0,.23.53.73.73,0,0,0,.54.2h2.71a2.71,2.71,0,0,1,2.7,2.71v.3h1.46v-.3A4.19,4.19,0,0,0,1868.4,62.61Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1867.12,61.66a3.48,3.48,0,1,0-3.48-3.48A3.48,3.48,0,0,0,1867.12,61.66Zm0-5.49a2,2,0,1,1-2,2A2,2,0,0,1,1867.12,56.17Z" transform="translate(3.6 3.6)"/>
+                                <path class="fman" d="M1858.6,60.18a4.38,4.38,0,1,0-4.37-4.38A4.38,4.38,0,0,0,1858.6,60.18Zm0-7.3a2.91,2.91,0,1,1-2.91,2.91A2.91,2.91,0,0,1,1858.6,52.88Z" transform="translate(3.6 3.6)"/>
+                            </g>
+                            <line class="Features-dropletLine" x1="1858.5" y1="73.6" x2="1858.5" y2="776.6"/>
+                        </g>
+                        <g id="Features-whiteWave">
+                            <path class="Features-whiteWaveLine" d="M2001.6,65.4c0,0-39.8-1.6-85.2,43.7s-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32c-51,0-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30"/>
+                        </g>
+                        <g id="Features-blueLine">
+                            <path class="Features-blueStroke" d="M2001.6,65.4c0,0-39.8-1.6-85.2,43.7s-57.8,106.8-150,126.3c-85.6,18.1-84.8,136-143.8,136c-82,0-106,160-193,160c-37,0-41-22-91-22c-68,0-86,81-149,81c-43,0-49-27-92-27s-65,32-116,32c-51,0-62-41-140-41c-103,0-143,98-196,98c-40,0-39-30-72-30c-32,0-37,37-87,37c-54.3,0-81-68-123-68c-43,0-65.3,85.3-124,91c-41.2,4-51.2-15-77.2-9c-39.5,9.1-43.1,65.6-91,69c-42,3-43.6-30-69.8-30"/>
+                        </g>
+                        <g id="Features-dots">
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="3.6"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="3.6"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="3.6"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="3.6"/>
+                            <circle class="Features-dot" cx="0" cy="0" r="2.5"/>
+                        </g>
+                    </svg>
+                </div>
             </section>
 
             <section class="section section-opportunities">
@@ -1832,6 +2033,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/animated-bg.js"></script>
 </body>
 
 </html>

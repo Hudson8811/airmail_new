@@ -1695,10 +1695,12 @@ a {
         color: #fff;
         height: 840px;
         padding-top: 160px;
-
+        position: relative;
         &-container {
             height: 100%;
             max-width: 660px;
+            position: relative;
+            z-index: 10;
         }
 
         &-text {

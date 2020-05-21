@@ -918,7 +918,7 @@ a:hover {
 
 .opportunities-article {
   padding-top: 20px;
-  padding-left: 60px;
+  padding-left: 80px;
   display: none;
 }
 
@@ -2963,6 +2963,7 @@ button.mfp-close {
         -ms-flex: 1;
             flex: 1;
     padding-right: 20px;
+    overflow: hidden;
   }
   .evolutions-item:after {
     display: none;

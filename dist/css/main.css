@@ -503,6 +503,10 @@ a:hover {
   margin-left: 34px;
 }
 
+.subscribe-tabs-price-old {
+  text-decoration: line-through;
+}
+
 .subscribe-tabs-price strong {
   font-size: 24px;
   line-height: 31px;
@@ -537,51 +541,50 @@ a:hover {
 }
 
 .subscribe-type {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 240px;
-          flex: 0 0 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .subscribe-type-item {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.subscribe-type-item.current {
+  background-color: #473CC2;
+  color: #fff;
+}
+
+.subscribe-type-item.current > span {
+  color: #ffffff;
+}
+
+.subscribe-type-item.current > span[class*="-text"] {
+  border-bottom: none;
+}
+
+.subscribe-type-item:hover > span[class*="-text"] {
+  border-bottom: none;
 }
 
 .subscribe-type-text {
   border-bottom: 1px dashed;
   color: #727885;
-  margin-left: 8px;
-  margin-right: 8px;
   cursor: pointer;
 }
 
-.subscribe-type-text.current {
-  background-color: #473CC2;
-  border-radius: 4px;
-  border-bottom: none;
-  color: #fff;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.subscribe-type-text:hover {
-  border-bottom: none;
-}
-
 .subscribe-type-percent {
-  color: #fff;
-  height: 24px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  color: #27AE60;
   text-transform: uppercase;
-  background-color: #27AE60;
-  border-radius: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 8px;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 150%;
 }
 
 .tabs {
@@ -1028,6 +1031,7 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  pointer-events: none;
 }
 
 .evolutions-article {
@@ -2050,9 +2054,23 @@ a:hover {
 }
 
 .create-bottom-total {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #1B1F26;
+}
+
+.create-bottom-total .oldprice {
+  font-size: 16px;
+  line-height: 21px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #727885;
+  font-weight: 400;
+}
+
+.create-bottom-total .label {
+  white-space: nowrap;
 }
 
 .create-bottom-button .btn {
@@ -2501,29 +2519,21 @@ button.mfp-close {
   color: #727885;
 }
 
-.subscribe-type-percent {
-  background: #00BA80;
-}
-
 .create-item-input-y-n {
   width: 308px;
   height: 40px;
-  background: #F3F5F7;
-  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.create-item-input-y-n span {
   font-size: 16px;
   line-height: 21px;
+  color: #E5E8ED;
+}
+
+.create-item-input-y-n--active {
   color: #1B1F26;
   opacity: 0.5;
 }
@@ -2867,32 +2877,6 @@ button.mfp-close {
   overflow: hidden;
 }
 
-.subscribe-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.subscribe-type-text {
-  margin: 0 13px;
-  position: relative;
-  z-index: 1;
-}
-
-.subscribe-type-text.current {
-  padding: 6px 9px;
-  margin: 0 4px;
-}
-
-.subscribe-type-percent {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-left: -10px;
-}
-
 .create-item-price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2910,6 +2894,17 @@ button.mfp-close {
   line-height: 21px;
   color: #1B1F26;
   padding: 0 16px;
+}
+
+.create-item-price-old {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  font-weight: 500;
+  font-size: 10px;
+  color: #727885;
+  margin-right: 8px;
+  line-height: 1;
+  margin-top: 6px;
 }
 
 .create-item-price--inactive {
@@ -3118,7 +3113,7 @@ button.mfp-close {
     font-size: 18px;
     line-height: 23px;
   }
-  .create-bottom-total span {
+  .create-bottom-total .itogo {
     color: #727885;
   }
   .create-bottom-button .btn {
@@ -3386,7 +3381,10 @@ button.mfp-close {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100px;
             flex: 0 0 100px;
-    max-width: 100px;
+    max-width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .subscribe-tabs-head {
     height: 140px;
@@ -4040,6 +4038,15 @@ button.mfp-close {
   }
   .morefunc-b-item__progress {
     margin-top: 20px;
+  }
+  .create-bottom-total .oldprice,
+  .create-bottom-total .itogo {
+    width: 100%;
+    display: block;
+  }
+  .subscribe-type-item {
+    margin: 0;
+    font-size: 13px;
   }
 }
 

@@ -257,7 +257,7 @@
         font-size: 18px;
         line-height: 23px;
 
-        span {
+        .itogo {
             color: #727885;
         }
     }
@@ -578,7 +578,8 @@
 
             &-item {
                 flex: 0 0 100px;
-                max-width: 100px;
+                max-width: 32%;
+                flex-grow: 1;
             }
 
             &-head {
@@ -1382,6 +1383,16 @@
 
     .morefunc-b-item__progress {
         margin-top: 20px;
+    }
+
+    .create-bottom-total .oldprice,
+    .create-bottom-total .itogo{
+        width: 100%;
+        display: block;
+    }
+    .subscribe-type-item{
+        margin: 0;
+        font-size: 13px;
     }
 }
 

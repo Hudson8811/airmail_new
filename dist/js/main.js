@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     $('.popup-open').magnificPopup({
         type: 'inline',
         midClick: true,
@@ -144,7 +142,101 @@ $(document).ready(function () {
         $(this).toggleClass("is-active");
         $(".fixed-menu").toggleClass('active');
     });
+
+
+
+
+    $('body').on('click', '.subscribe-type-item', function () {
+        if (!$(this).hasClass('current')){
+            $(this).addClass('current').siblings().removeClass('current');
+            var percent = parseInt($(this).data('percent')),
+                subBlocks = $('.subscribe-tabs-price[data-price]');
+            subBlocks.each(function() {
+                var basePrice = parseInt($(this).data("price"));
+                if (basePrice > 0){
+                    if (percent > 0){
+                        var newPrice = Math.ceil(basePrice - (basePrice * percent/100));
+                        $(this).find('strong').html(newPrice);
+                        $(this).find('.subscribe-tabs-price-old').html(basePrice+'₽');
+                    } else {
+                        $(this).find('strong').html(basePrice);
+                        $(this).find('.subscribe-tabs-price-old').html('');
+                    }
+                }
+            });
+            calculateModal();
+        }
+    });
+
+    $('body').on('change', '.create-item .create-checkbox input', function () {
+        var parent = $(this).closest('.create-item');
+        if(this.checked) {
+            parent.find('.create-item-price').removeClass('create-item-price--inactive');
+            parent.find('.create-item-input-y-n').addClass('create-item-input-y-n--active').html('Выбрано');
+        } else {
+            parent.find('.create-item-price').addClass('create-item-price--inactive');
+            parent.find('.create-item-input-y-n').removeClass('create-item-input-y-n--active').html('Не выбрано');
+        }
+        calculateModal();
+    });
+
+    $('body').on('change paste keyup', '.create-item .create-item-input input', function () {
+        var parent = $(this).closest('.create-item');
+        if (!parent.find('.create-checkbox input')[0].checked){
+            parent.find('.create-checkbox input').prop('checked',true).trigger('change')
+        }
+        this.value = this.value.replace(/[^\d]/g,'');
+        calculateModal();
+    });
+
 });
+
+function calculateModal(){
+    var fields = $('.create-item'),
+        percent = $('.subscribe-type-item.current').data('percent'),
+        label = $('.subscribe-type-item.current').data('label'),
+        resultOld = 0
+        result = 0;
+    fields.each(function() {
+        if ($(this).find('.create-checkbox input')[0].checked){
+            var multi = $(this).data('multi'),
+                fixed = $(this).data('fixed');
+            if (typeof fixed !== "undefined"){
+                var newPrice = Math.ceil(fixed - (fixed * percent/100));
+                $(this).find('.create-item-price-current').html(newPrice+'₽');
+                if (percent > 0){
+                    $(this).find('.create-item-price-old').html(fixed+'₽');
+                    resultOld += fixed;
+                } else {
+                    $(this).find('.create-item-price-old').html('');
+                }
+                result += newPrice;
+            } else if (typeof multi !== "undefined"){
+                var count = $(this).find('.create-item-input input').val(),
+                    oldPrice = Math.ceil(count*multi),
+                    newPrice = Math.ceil(count*multi - (count*multi * percent/100));
+                $(this).find('.create-item-price-current').html(newPrice+'₽');
+                if (percent > 0){
+                    $(this).find('.create-item-price-old').html(oldPrice+'₽');
+                    resultOld += oldPrice;
+                } else {
+                    $(this).find('.create-item-price-old').html('');
+                }
+                result += newPrice;
+            }
+        } else {
+            $(this).find('.create-item-price-current').html('0₽');
+            $(this).find('.create-item-price-old').html('');
+        }
+    });
+    if (percent > 0) {
+        $('.create-bottom-total .oldprice').html(resultOld+'₽');
+    } else {
+        $('.create-bottom-total .oldprice').html('');
+    }
+    $('.create-bottom-total .summ').html(result);
+    $('.create-bottom-total .label').html(label);
+}
 
 
 jQuery(document).ready(function ($) {
@@ -216,7 +308,7 @@ jQuery(document).ready(function ($) {
             step: 5,
             slide: function (event, ui) {
                 buffer.text(ui.value);
-                $(this).find('.modal-create-rangesliderv2_input').val(ui.value).width(buffer.width());
+                $(this).find('.modal-create-rangesliderv2_input').val(ui.value).width(buffer.width()).trigger('change');
 
             }
         });

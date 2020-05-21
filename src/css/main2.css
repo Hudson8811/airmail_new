@@ -428,7 +428,7 @@
 }
 
 .fixed-menu__title {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 28px;
   font-weight: 600;
   color: #fff;
@@ -443,7 +443,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 700;
   max-width: 146px;
@@ -478,7 +478,7 @@
 }
 
 .fixed-menu__vacancy-list a {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 16px;
   color: #fff;
   font-weight: 600;
@@ -497,7 +497,7 @@
 .fixed-menu__list-item a {
   position: relative;
   z-index: 10;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 17px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 600;
@@ -533,14 +533,14 @@
 }
 
 .contacts-us__title {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 16px;
   color: #0098C7;
   font-weight: 300;
 }
 
 .contacts-us__link {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
   color: #0098C7;
   text-transform: uppercase;
@@ -613,7 +613,7 @@
 }
 
 .text-block__title {
-  font-size: 25px;
+  font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   background-image: -webkit-linear-gradient(221.71deg, #D045AE 50%, #473CC2 98.79%);
@@ -732,14 +732,14 @@
 }
 
 .about-info__item-name {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 28px;
   font-weight: 300;
   color: #9E9E9E;
 }
 
 .about-info__item-option {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 28px;
   color: #292929;
   font-weight: 700;
@@ -1009,7 +1009,7 @@
 }
 
 .footer-inside__title {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 28px;
   color: #fff;
   font-weight: 600;

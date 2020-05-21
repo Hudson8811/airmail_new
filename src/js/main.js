@@ -195,6 +195,7 @@ function calculateModal(){
     var fields = $('.create-item'),
         percent = $('.subscribe-type-item.current').data('percent'),
         label = $('.subscribe-type-item.current').data('label'),
+        months = $('.subscribe-type-item.current').data('multi'),
         resultOld = 0
         result = 0;
     fields.each(function() {
@@ -230,11 +231,11 @@ function calculateModal(){
         }
     });
     if (percent > 0) {
-        $('.create-bottom-total .oldprice').html(resultOld+'₽');
+        $('.create-bottom-total .oldprice').html((resultOld*months)+'₽');
     } else {
         $('.create-bottom-total .oldprice').html('');
     }
-    $('.create-bottom-total .summ').html(result);
+    $('.create-bottom-total .summ').html(result*months);
     $('.create-bottom-total .label').html(label);
 }
 

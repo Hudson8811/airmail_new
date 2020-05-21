@@ -4243,11 +4243,11 @@ button.mfp-close {
 }
 
 .inside-page__content .cd-section__cost span {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .inside-page__title {
-  font-size: 35px;
+  font-size: 34px;
   line-height: 40px;
   font-weight: 100;
   margin-bottom: 38px;
@@ -4276,7 +4276,7 @@ button.mfp-close {
 }
 
 .inside-page__content p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 32px;
 }
 
@@ -4296,7 +4296,7 @@ button.mfp-close {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 15px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 32px;
   color: #292929;
 }
@@ -4316,14 +4316,14 @@ button.mfp-close {
 }
 
 .inside-page__content section > h2 {
-  font-size: 36px;
+  font-size: 35px;
   line-height: 39px;
   font-weight: 100;
   margin-bottom: 30px;
 }
 
 .inside-page__content section > h3 {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 27px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -4356,7 +4356,7 @@ button.mfp-close {
       -ms-flex-align: center;
           align-items: center;
   min-width: 130px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 15px;
   color: #9E9E9E;
   text-transform: uppercase;
@@ -4407,13 +4407,13 @@ button.mfp-close {
 }
 
 .inside-page__form-title {
-  font-size: 40px;
+  font-size: 39px;
   line-height: 48px;
   font-weight: 100;
 }
 
 .inside-page__form-title--lit {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 27px;
   color: #292929;
   font-weight: 600;
@@ -4432,7 +4432,7 @@ button.mfp-close {
           box-sizing: border-box;
   padding: 0 20px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   border: 1px solid #ECECEC;
 }
@@ -4449,7 +4449,7 @@ button.mfp-close {
           box-sizing: border-box;
   padding: 10px 20px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   border: 1px solid #ECECEC;
   resize: none;
@@ -4460,7 +4460,7 @@ button.mfp-close {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 700;
   -ms-flex-negative: 0;
@@ -4480,7 +4480,7 @@ button.mfp-close {
   outline: 0;
   border: 0;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 700;
   color: #663903;
@@ -4833,14 +4833,14 @@ button.mfp-close {
 }
 
 .about-info__item-name {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 28px;
   font-weight: 300;
   color: #9E9E9E;
 }
 
 .about-info__item-option {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 28px;
   color: #292929;
   font-weight: 700;

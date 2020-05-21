@@ -189,6 +189,13 @@ $(document).ready(function () {
         calculateModal();
     });
 
+	$('.video-img--slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+    arrows: false,
+    dots: true
+	});
 });
 
 function calculateModal(){

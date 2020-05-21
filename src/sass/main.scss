@@ -899,7 +899,6 @@ a {
         position: relative;
         box-shadow: 8px 8px 32px rgba(71, 60, 194, 0.16);
         border-radius: 4px;
-        overflow: hidden;
 
         img {}
 
@@ -911,6 +910,32 @@ a {
             z-index: 1;
             font-size: 60px;
         }
+
+        &--slider {
+            max-width: 520px;
+        }
+
+        &__slide {
+            position: relative;
+        }
+    }
+}
+
+.slick-dots li {
+    margin: 0 !important;
+
+    button {
+        width: 5px;
+        height: 5px;
+        background-color: #1B1F26;
+        opacity: 0.7;
+        border-radius: 50%;
+    }
+}
+
+.slick-active {
+    .video-img__dot {
+        opacity: 1;
     }
 }
 

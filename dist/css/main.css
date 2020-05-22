@@ -486,6 +486,10 @@ a:hover {
   border-bottom: 1px solid #E5E8ED;
 }
 
+.table table tr:last-child td, .table table tr:last-child th {
+  border: 0;
+}
+
 .subscribe-table th {
   width: 240px;
 }
@@ -3061,6 +3065,13 @@ button.mfp-close {
 
 .mfp-close:active {
   top: 40px;
+}
+
+.desctop_hr_modale {
+  height: 1px;
+  border: 0;
+  width: 100%;
+  background: #E5E8ED;
 }
 
 @media (max-width: 1400px) {

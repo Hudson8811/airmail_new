@@ -248,7 +248,6 @@
 
     .create-bottom {
         justify-content: flex-end;
-        border-top: 1px solid $grey;
     }
 
     .create-bottom-total {
@@ -770,7 +769,7 @@
 
         &-video {
             display: flex;
-            margin-bottom: $p;
+            margin-bottom: $p*2;
 
             img {
                 margin: auto;

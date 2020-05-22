@@ -454,7 +454,7 @@ function getNumEnding(iNumber, aEndings)
 }
 
 $(document).ready(function () {
-    var countdown1 = $('#countdown1'),
+    var countdown1 = $('.tdbl-timer-counter'),
         ts = new Date(countdown1.attr('data-time-out')),
         newYear = true;
     if ((new Date()) > ts) {
@@ -473,4 +473,9 @@ $(document).ready(function () {
         }
     });
 
+    $('.anchor-scroll').click(function () {
+      link = $(this).attr('href');
+      to = $(link).offset().top;
+      $('body, html').animate({scrollTop: to}, 800);
+		});
 });

@@ -2506,7 +2506,7 @@ button.mfp-close {
     }
 }
 
-.create-item-input input {
+.create-item-input input:not(.js-allownumericwithoutdecimal) {
     width: 308px;
 }
 

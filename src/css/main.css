@@ -2696,7 +2696,7 @@ button.mfp-close {
   opacity: 0.5;
 }
 
-.create-item-input input {
+.create-item-input input:not(.js-allownumericwithoutdecimal) {
   width: 308px;
 }
 
@@ -3770,7 +3770,7 @@ button.mfp-close {
         -ms-flex: 1;
             flex: 1;
   }
-  .create-item-input input {
+  .create-item-input input:not(.js-allownumericwithoutdecimal) {
     width: 100%;
   }
   .create-checkbox {

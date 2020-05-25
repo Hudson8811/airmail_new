@@ -685,7 +685,7 @@
             }
 
             &-input {
-                input {
+                input:not(.js-allownumericwithoutdecimal) {
                     width: 100%;
                 }
             }

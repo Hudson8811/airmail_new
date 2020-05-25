@@ -191,7 +191,7 @@ $(document).ready(function () {
         if (!parent.find('.create-checkbox input')[0].checked) {
             parent.find('.create-checkbox input').prop('checked', true).trigger('change')
         }
-        this.value = this.value.replace(/[^\d]/g, '');
+        this.value = this.value.replace(/[^\d]/g, '').replace(/^0+/, '');
         calculateModal();
     });
 

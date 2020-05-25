@@ -435,6 +435,10 @@ a:hover {
   margin-left: 40px;
 }
 
+.nav-item:not(:first-child) {
+  display: none;
+}
+
 .nav-link {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
@@ -2037,7 +2041,7 @@ a:hover {
 }
 
 .section-opportunities-container {
-  background-color: #FFFFFF;
+  background-color: #FEFFFF !important;
   border-radius: 8px;
   -webkit-transform: translateY(-80px);
       -ms-transform: translateY(-80px);
@@ -2589,6 +2593,7 @@ button.mfp-close {
 }
 
 .morefunc-compare-button {
+  display: none;
   font-size: 14px;
   line-height: 18px;
   min-height: 60px;
@@ -2691,7 +2696,7 @@ button.mfp-close {
   opacity: 0.5;
 }
 
-.create-item-input input {
+.create-item-input input:not(.js-allownumericwithoutdecimal) {
   width: 308px;
 }
 
@@ -3443,6 +3448,9 @@ button.mfp-close {
 }
 
 @media (max-width: 960px) {
+  .opportunities-article.active {
+    display: none;
+  }
   .popup-video {
     margin-top: calc(50vh - 265px);
   }
@@ -3765,7 +3773,7 @@ button.mfp-close {
         -ms-flex: 1;
             flex: 1;
   }
-  .create-item-input input {
+  .create-item-input input:not(.js-allownumericwithoutdecimal) {
     width: 100%;
   }
   .create-checkbox {
@@ -3825,9 +3833,7 @@ button.mfp-close {
     display: none;
   }
   .opportunities-video {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     margin-bottom: 40px;
   }
   .opportunities-video img {
@@ -4553,6 +4559,7 @@ button.mfp-close {
 }
 
 .inside-page__content .cd-section__cost {
+  display: none;
   margin-top: 30px;
 }
 
@@ -4853,7 +4860,7 @@ button.mfp-close {
 .fixed-menu__button {
   position: relative;
   z-index: 10;
-  margin-top: 60px;
+  margin-top: 45px;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

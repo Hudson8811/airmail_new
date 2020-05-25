@@ -291,6 +291,9 @@
 }
 
 @media (max-width: 960px) {
+    .opportunities-article.active{
+        display: none;
+    }
     .popup-video{
         margin-top: calc(50vh - 265px);
     }
@@ -685,7 +688,7 @@
             }
 
             &-input {
-                input {
+                input:not(.js-allownumericwithoutdecimal) {
                     width: 100%;
                 }
             }
@@ -768,7 +771,7 @@
         }
 
         &-video {
-            display: flex;
+            display: block;
             margin-bottom: $p*2;
 
             img {

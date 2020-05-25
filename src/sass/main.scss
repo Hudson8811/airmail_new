@@ -420,6 +420,10 @@ a {
         text-transform: uppercase;
         color: #fff;
         margin-left: $p*2;
+
+        &:not(:first-child) {
+            display: none;
+        }
     }
 
     &-link {
@@ -1872,7 +1876,7 @@ a {
 
     &-opportunities {
         &-container {
-            background-color: #FFFFFF;
+            background-color: #FEFFFF !important;
             border-radius: 8px;
             transform: translateY(-$p*4);
             position: relative;
@@ -2394,6 +2398,7 @@ button.mfp-close {
 }
 
 .morefunc-compare-button {
+    display: none;
     font-size: 14px;
     line-height: 18px;
     min-height: 60px;
@@ -2501,7 +2506,7 @@ button.mfp-close {
     }
 }
 
-.create-item-input input {
+.create-item-input input:not(.js-allownumericwithoutdecimal) {
     width: 308px;
 }
 

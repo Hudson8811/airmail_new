@@ -3833,9 +3833,7 @@ button.mfp-close {
     display: none;
   }
   .opportunities-video {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     margin-bottom: 40px;
   }
   .opportunities-video img {

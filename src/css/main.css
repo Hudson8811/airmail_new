@@ -3448,6 +3448,9 @@ button.mfp-close {
 }
 
 @media (max-width: 960px) {
+  .opportunities-article.active {
+    display: none;
+  }
   .popup-video {
     margin-top: calc(50vh - 265px);
   }

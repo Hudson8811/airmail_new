@@ -375,7 +375,18 @@ $('.fixed-menu__list-item a').click(function () {
 });
 
 $(window).on("load", function () {
-    $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
+    if(window.matchMedia('(min-width: 961px)').matches){
+        $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
+    }
+});
+
+$(window).resize(function(){
+    if(window.matchMedia('(min-width: 961px)').matches){
+        $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
+    }
+    else{
+        $(".js-mCSB-table-modal.mCustomScrollbar, .js-create-list-wrap.mCustomScrollbar").mCustomScrollbar('destroy');
+    }
 });
 
 (function ($) {

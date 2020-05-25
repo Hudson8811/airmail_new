@@ -2,11 +2,11 @@ $(document).ready(function () {
     $('.popup-open').magnificPopup({
         type: 'inline',
         midClick: true,
-       /* callbacks: {
-        open: function() {
-            console.log($('.mfp-container').length);
-          }
-        }*/
+        /* callbacks: {
+         open: function() {
+             console.log($('.mfp-container').length);
+           }
+         }*/
     });
 
     var benefitItems = $('.benefit-item-price');
@@ -35,7 +35,7 @@ $(document).ready(function () {
             $(this).addClass('active');
             $(tabsOpportunities).addClass('active');
             var tabs = $(tabsOpportunities).find('.opportunities-link');
-            if (tabs.length){
+            if (tabs.length) {
                 tabs[0].click();
             }
             return false;
@@ -62,7 +62,7 @@ $(document).ready(function () {
             $(this).addClass('active');
 
             $(tabsOpportunities2).addClass('active');
-            if ($(tabsOpportunities2).find('.video-img--slider').length > 0){
+            if ($(tabsOpportunities2).find('.video-img--slider').length > 0) {
                 $(tabsOpportunities2).find('.video-img--slider').slick('refresh');
             }
             return false;
@@ -79,7 +79,7 @@ $(document).ready(function () {
                 type: 'inline'
             });
             $(tabsOpportunities2).addClass('active');
-            if ($(tabsOpportunities2).find('.video-img--slider').length > 0){
+            if ($(tabsOpportunities2).find('.video-img--slider').length > 0) {
                 $(tabsOpportunities2).find('.video-img--slider').slick('refresh');
             }
         }
@@ -144,7 +144,7 @@ $(document).ready(function () {
 
 
     $(".inside-page__hamburger").click(function () {
-        !$(this).hasClass("is-active") ? $("body").css("overflow","hidden") : $("body").css("overflow","auto");
+        !$(this).hasClass("is-active") ? $("body").css("overflow", "hidden") : $("body").css("overflow", "auto");
         $(this).toggleClass("is-active");
         $(".fixed-menu").toggleClass('active');
     });
@@ -153,17 +153,17 @@ $(document).ready(function () {
 
 
     $('body').on('click', '.subscribe-type-item', function () {
-        if (!$(this).hasClass('current')){
+        if (!$(this).hasClass('current')) {
             $(this).addClass('current').siblings().removeClass('current');
             var percent = parseInt($(this).data('percent')),
                 subBlocks = $('.subscribe-tabs-price[data-price]');
-            subBlocks.each(function() {
+            subBlocks.each(function () {
                 var basePrice = parseInt($(this).data("price"));
-                if (basePrice > 0){
-                    if (percent > 0){
-                        var newPrice = Math.ceil(basePrice - (basePrice * percent/100));
+                if (basePrice > 0) {
+                    if (percent > 0) {
+                        var newPrice = Math.ceil(basePrice - (basePrice * percent / 100));
                         $(this).find('strong').html(newPrice);
-                        $(this).find('.subscribe-tabs-price-old').html(basePrice+'₽');
+                        $(this).find('.subscribe-tabs-price-old').html(basePrice + '₽');
                     } else {
                         $(this).find('strong').html(basePrice);
                         $(this).find('.subscribe-tabs-price-old').html('');
@@ -176,7 +176,7 @@ $(document).ready(function () {
 
     $('body').on('change', '.create-item .create-checkbox input', function () {
         var parent = $(this).closest('.create-item');
-        if(this.checked) {
+        if (this.checked) {
             parent.find('.create-item-price').removeClass('create-item-price--inactive');
             parent.find('.create-item-input-y-n').addClass('create-item-input-y-n--active').html('Выбрано');
         } else {
@@ -188,50 +188,50 @@ $(document).ready(function () {
 
     $('body').on('change paste keyup', '.create-item .create-item-input input', function () {
         var parent = $(this).closest('.create-item');
-        if (!parent.find('.create-checkbox input')[0].checked){
-            parent.find('.create-checkbox input').prop('checked',true).trigger('change')
+        if (!parent.find('.create-checkbox input')[0].checked) {
+            parent.find('.create-checkbox input').prop('checked', true).trigger('change')
         }
-        this.value = this.value.replace(/[^\d]/g,'');
+        this.value = this.value.replace(/[^\d]/g, '');
         calculateModal();
     });
 
-	$('.video-img--slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		infinite: true,
+    $('.video-img--slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
         arrows: false,
         dots: true
-	});
+    });
 });
 
-function calculateModal(){
+function calculateModal() {
     var fields = $('.create-item'),
         percent = $('.subscribe-type-item.current').data('percent'),
         label = $('.subscribe-type-item.current').data('label'),
         months = $('.subscribe-type-item.current').data('multi'),
         resultOld = 0
-        result = 0;
-    fields.each(function() {
-        if ($(this).find('.create-checkbox input')[0].checked){
+    result = 0;
+    fields.each(function () {
+        if ($(this).find('.create-checkbox input')[0].checked) {
             var multi = $(this).data('multi'),
                 fixed = $(this).data('fixed');
-            if (typeof fixed !== "undefined"){
-                var newPrice = Math.ceil(fixed - (fixed * percent/100));
-                $(this).find('.create-item-price-current').html(newPrice+'₽');
-                if (percent > 0){
-                    $(this).find('.create-item-price-old').html(fixed+'₽');
+            if (typeof fixed !== "undefined") {
+                var newPrice = Math.ceil(fixed - (fixed * percent / 100));
+                $(this).find('.create-item-price-current').html(newPrice + '₽');
+                if (percent > 0) {
+                    $(this).find('.create-item-price-old').html(fixed + '₽');
                     resultOld += fixed;
                 } else {
                     $(this).find('.create-item-price-old').html('');
                 }
                 result += newPrice;
-            } else if (typeof multi !== "undefined"){
+            } else if (typeof multi !== "undefined") {
                 var count = $(this).find('.create-item-input input').val(),
-                    oldPrice = Math.ceil(count*multi),
-                    newPrice = Math.ceil(count*multi - (count*multi * percent/100));
-                $(this).find('.create-item-price-current').html(newPrice+'₽');
-                if (percent > 0){
-                    $(this).find('.create-item-price-old').html(oldPrice+'₽');
+                    oldPrice = Math.ceil(count * multi),
+                    newPrice = Math.ceil(count * multi - (count * multi * percent / 100));
+                $(this).find('.create-item-price-current').html(newPrice + '₽');
+                if (percent > 0) {
+                    $(this).find('.create-item-price-old').html(oldPrice + '₽');
                     resultOld += oldPrice;
                 } else {
                     $(this).find('.create-item-price-old').html('');
@@ -244,11 +244,11 @@ function calculateModal(){
         }
     });
     if (percent > 0) {
-        $('.create-bottom-total .oldprice').html((resultOld*months)+'₽');
+        $('.create-bottom-total .oldprice').html((resultOld * months) + '₽');
     } else {
         $('.create-bottom-total .oldprice').html('');
     }
-    $('.create-bottom-total .summ').html(result*months);
+    $('.create-bottom-total .summ').html(result * months);
     $('.create-bottom-total .label').html(label);
 }
 
@@ -375,7 +375,113 @@ $('.fixed-menu__list-item a').click(function () {
 });
 
 $(window).on("load", function () {
-    $(".js-mCSB-table-modal, .js-create-list-wrap").mCustomScrollbar();
+    if(window.matchMedia('(min-width: 961px)').matches){
+        $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
+    }
 });
 
+$(window).resize(function(){
+    if(window.matchMedia('(min-width: 961px)').matches){
+        $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
+    }
+    else{
+        $(".js-mCSB-table-modal.mCustomScrollbar, .js-create-list-wrap.mCustomScrollbar").mCustomScrollbar('destroy');
+    }
+});
 
+(function ($) {
+
+    //Таймер обратного отсчета
+
+    // Количество секунд в каждой единице времени
+    var days = 24 * 60 * 60,
+        hours = 60 * 60,
+        minutes = 60;
+
+    $.fn.countdown = function (prop) {
+
+        var options = $.extend({
+            callback: function () {},
+            timestamp: 0
+        }, prop);
+
+        var left, d, h, m, s;
+
+
+
+
+        (function tick() {
+            // осталось времени
+            left = Math.floor((options.timestamp - (new Date())) / 1000);
+
+            if (left < 0) {
+                left = 0;
+            }
+
+            // осталось дней
+            d = Math.floor(left / days);
+            left -= d * days;
+
+            // часов
+            h = Math.floor(left / hours);
+            left -= h * hours;
+
+            // минут
+            m = Math.floor(left / minutes);
+            left -= m * minutes;
+
+            // секунд
+            s = left;
+
+            options.callback(d, h, m, s);
+
+            setTimeout(tick, 1000);
+        })();
+
+
+        return this;
+    };
+})(jQuery);
+
+function getNumEnding(iNumber, aEndings)
+{
+    var sEnding, i;
+    iNumber = iNumber % 100;
+    if (iNumber>=11 && iNumber<=19) {
+        sEnding=aEndings[2];
+    }
+    else {
+        i = iNumber % 10;
+        switch (i)
+        {
+            case (1): sEnding = aEndings[0]; break;
+            case (2):
+            case (3):
+            case (4): sEnding = aEndings[1]; break;
+            default: sEnding = aEndings[2];
+        }
+    }
+    return sEnding;
+}
+
+$(document).ready(function () {
+    var countdown1 = $('#countdown1'),
+        ts = new Date(countdown1.attr('data-time-out')),
+        newYear = true;
+    if ((new Date()) > ts) {
+        // *1000 - время должно быть в миллисекундах
+        ts = (new Date()).getTime() + 10 * 24 * 60 * 60 * 1000;
+        newYear = false;
+    }
+
+    countdown1.countdown({
+        timestamp: ts,
+        callback: function (days, hours, minutes, seconds) {
+            countdown1.find('.tdbl-timer-counter__day').html(days+" "+getNumEnding(days, ['день', 'дня', 'дней']));
+            countdown1.find('.tdbl-timer-counter__hours').html(hours.toString().padStart(2,0));
+            countdown1.find('.tdbl-timer-counter__minutes').html(minutes.toString().padStart(2,0));
+            countdown1.find('.tdbl-timer-counter__seconds').html(seconds.toString().padStart(2,0));
+        }
+    });
+
+});

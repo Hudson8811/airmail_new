@@ -147,6 +147,22 @@
             }
         }
 
+        #section4 {
+            ul li {
+                border-radius: 5px;
+                background-color: rgba(#3D3D3D, 0.1);
+                padding: 10px;
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+
+                &::before {
+                    content: '';
+                }
+            }
+        }
+
         #section2,
         #section3 {
             margin-top: 40px;
@@ -176,7 +192,7 @@
    
 
     &__form{
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         padding-top: 40px;
         border-top: 1px solid #ECECEC;
 
@@ -310,8 +326,27 @@
         
 
     }
-   
-    
+
+    &__notice {
+        margin-bottom: 80px;
+        border-top: 1px solid #ECECEC;
+        padding-top: 50px;
+
+        &-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 32px;
+            color: #BD1E1E;
+        }
+
+        ul {
+            li {
+                font-size: 14px;
+                line-height: 32px;
+                color: #BD1E1E;
+            }
+        }
+    }
 
 }
 .fixed-menu{
@@ -415,8 +450,81 @@
             }
         }
     }
-   
+    &-animate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        pointer-events: none;
+
+        .square {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: -80px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+            animation: move-to-top 25s infinite linear;
+
+            &:first-child {
+                left: 10%;
+            }
+            &:nth-child(2) {
+                left: 20%;
+                animation-delay: 12s;
+            }
+            &:nth-child(3) {
+                left: 25%;
+                animation-delay: 4s;
+            }
+            &:nth-child(4) {
+                left: 40%;
+                animation-duration: 22s;
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+            &:nth-child(5) {
+                left: 70%;
+            }
+            &:nth-child(6) {
+                left: 80%;
+                animation-delay: 7s;
+            }
+            &:nth-child(7) {
+                left: 32%;
+                animation-delay: 7s;
+            }
+            &:nth-child(8) {
+                left: 55%;
+            }
+            &:nth-child(9) {
+                left: 25%;
+                animation-delay: 2s;
+            }
+            &:last-child {
+                left: 90%;
+                animation-delay: 10s;
+            }
+        }
+    }
 }
+
+@keyframes move-to-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(600deg);
+        opacity: 0;
+    }
+}
+
 .contacts-us{
     display: flex;
     align-items: center;
@@ -756,9 +864,7 @@
            
         }
         section + section{
-            margin-top: 35px;
             padding-top: 35px;
-            border-top: 1px solid #9E9E9E;
         }
     }
     .about-info{
@@ -886,7 +992,20 @@
     }
 	.about-info__item,
 	.about-info__item-content {
-		border-radius: 4px;
+      &:nth-child(3) {
+          .about-info__item,
+          .about-info__item-content {
+              border-bottom-left-radius: 4px;
+              border-top-left-radius: 4px;
+          }
+      }
+      &:nth-child(2) {
+          .about-info__item,
+          .about-info__item-content {
+              border-bottom-right-radius: 4px;
+              border-top-right-radius: 4px;
+          }
+      }
 	}
 }
 
@@ -897,21 +1016,25 @@
 .footer-inside{
     background-color: #121211;
     padding: 60px 0;
+    position: relative;
+    z-index: 1000;
+
     &__content{
         margin: 0 20px 0 718px;
-        max-width: 800px;
+        max-width: 676px;
 
     }
     &__row{
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
     &__title{
         font-size: 23px;
         line-height: 28px;
         color: #fff;
         font-weight: 600;
-        margin-right: 155px;
+        margin-bottom: 20px;
     }
     &__partners{
         display: flex;
@@ -971,7 +1094,7 @@
 @media (max-width: 1550px){
     .footer-inside{
         &__content{
-            margin: 0 20px 0 618px;
+            margin: 0 20px 0 576px;
         }
     }
     .fixed-menu{
@@ -987,7 +1110,8 @@
     }
     .footer-inside{
         &__content{
-            margin: 0 20px 0 518px;
+            margin: 0 20px 0 auto;
+            max-width: 672px;
         }
     }
 }
@@ -1017,7 +1141,7 @@
     .footer-inside{
         &__content{
             max-width: 100%;
-            margin: 0 50px 0 50px;
+            margin: 0 20px;
         }
     }
     .inside-page{
@@ -1066,9 +1190,7 @@
 
         }
         section + section{
-            margin-top: 35px;
             padding-top: 35px;
-            border-top: 1px solid #9E9E9E;
         }
     }
     .about-info{
@@ -1101,7 +1223,7 @@
         }
         &__row{
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
     }
     .about-info{
@@ -1148,10 +1270,12 @@
         padding: 30px 0 10px;
         &__partners{
             justify-content: center;
+            margin-right: 0;
         }
         &__partners-item-container{
-            width: 50%;
+            width: 100%;
             margin-bottom: 20px;
+            padding-right: 0;
         }
     }
     .inside-page{
@@ -1190,16 +1314,24 @@
     .footer-inside{
         &__partners-item-container{
             width: 100%;
-            max-width: 320px;
         }
     }
     .about-info{
         &__item-container{
-            width: 100%;
 
             &:last-child{
-                margin-bottom: 0;
+                margin-bottom: 20px;
             }
+        }
+    }
+
+    .inside-page {
+        &__content {
+            margin: 80px 25px 0;
+        }
+
+        &__about-info--top {
+            width: 100%;
         }
     }
 }

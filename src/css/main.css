@@ -4574,6 +4574,12 @@ button.mfp-close {
   margin-bottom: 38px;
 }
 
+.inside-page__title-logo {
+  display: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .inside-page__title--bold {
   font-weight: 600;
 }
@@ -4631,8 +4637,8 @@ button.mfp-close {
 
 .inside-page__content #section4 ul li {
   border-radius: 5px;
-  background-color: rgba(61, 61, 61, 0.1);
-  padding: 10px;
+  background-color: rgba(61, 61, 61, 0.05);
+  padding: 10px 10px 10px 20px;
 }
 
 .inside-page__content #section4 ul li:not(:last-child) {
@@ -4836,6 +4842,23 @@ button.mfp-close {
   margin-bottom: 80px;
   border-top: 1px solid #ECECEC;
   padding-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.inside-page__notice:before {
+  content: '';
+  display: block;
+  width: calc(100% + 100px);
+  height: calc(100% + 80px);
+  position: absolute;
+  top: 0;
+  left: -100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(15%, rgba(201, 176, 159, 0.3)), to(#fff));
+  background: -webkit-linear-gradient(left, rgba(201, 176, 159, 0.3) 15%, #fff);
+  background: -o-linear-gradient(left, rgba(201, 176, 159, 0.3) 15%, #fff);
+  background: linear-gradient(90deg, rgba(201, 176, 159, 0.3) 15%, #fff);
+  z-index: -1;
 }
 
 .inside-page__notice-title {
@@ -5330,7 +5353,7 @@ button.mfp-close {
 }
 
 .inside-page__content {
-  margin: 50px 0 0 100px;
+  margin: 30px 0 0 100px;
 }
 
 @media (max-width: 1550px) {
@@ -5412,9 +5435,12 @@ button.mfp-close {
     z-index: 9500;
     background-color: #fff;
   }
+  .inside-page__title-logo {
+    display: block;
+  }
   .inside-page__content {
     max-width: 100%;
-    margin: 80px 50px 0 50px;
+    margin: 30px 50px 0 50px;
   }
   .inside-page__text-block {
     margin: 30px 0;
@@ -5735,7 +5761,7 @@ button.mfp-close {
   }
   .inside-page__content {
     max-width: 100%;
-    margin: 80px 50px 0 50px;
+    margin: 30px 50px 0 50px;
   }
   .inside-page__text-block {
     margin: 30px 0;
@@ -5881,7 +5907,7 @@ button.mfp-close {
     margin-bottom: 20px;
   }
   .inside-page__content {
-    margin: 80px 25px 0;
+    margin: 30px 25px 0;
   }
   .inside-page__about-info--top {
     width: 100%;

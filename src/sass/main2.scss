@@ -614,6 +614,10 @@
         width: 100%;
         height: 100%;
     }
+    
+    #copy-btn {
+        cursor: pointer;
+    }
 
     &__copy {
         margin: 0 15px;

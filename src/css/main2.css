@@ -758,6 +758,10 @@
   height: 100%;
 }
 
+.contacts-us #copy-btn {
+  cursor: pointer;
+}
+
 .contacts-us__copy {
   margin: 0 15px;
 }

@@ -5103,7 +5103,8 @@ button.mfp-close {
       -ms-flex-align: center;
           align-items: center;
   text-align: right;
-  width: 254px;
+  max-width: 290px;
+  width: 100%;
   height: 72px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -5114,6 +5115,7 @@ button.mfp-close {
 
 .contacts-us__content {
   margin-left: 16px;
+  text-align: left;
 }
 
 .contacts-us__title {
@@ -5169,13 +5171,16 @@ button.mfp-close {
 .contacts-us__avatar {
   border-radius: 50%;
   overflow: hidden;
-  margin-left: 14px;
   height: 42px;
 }
 
 .contacts-us__avatar-img {
   width: 100%;
   height: 100%;
+}
+
+.contacts-us__copy {
+  margin: 0 15px;
 }
 
 .text-block {

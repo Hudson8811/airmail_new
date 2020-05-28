@@ -340,8 +340,10 @@
                 background-color: #ffe4a5;
             }
         }
-        
 
+				&--top {
+					margin-top: 0;
+				}
     }
 
     &__notice {

@@ -4568,9 +4568,10 @@ button.mfp-close {
 }
 
 .inside-page__content .cd-section__about-course {
-  font-size: 15px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 25px;
   font-style: italic;
+  margin-top: 5px;
 }
 
 .inside-page__title {

@@ -5398,6 +5398,9 @@ button.mfp-close {
     width: 50%;
     margin-bottom: 20px;
   }
+  .about-info__item-container:last-child, .about-info__item-container:nth-child(3) {
+    margin-bottom: 0;
+  }
   .about-info__item-container:nth-child(3) .about-info__item,
   .about-info__item-container:nth-child(3) .about-info__item-content {
     border-bottom-left-radius: 4px;
@@ -5926,9 +5929,6 @@ button.mfp-close {
   }
   .footer-inside__partners-item-container {
     width: 100%;
-  }
-  .about-info__item-container:last-child {
-    margin-bottom: 20px;
   }
   .inside-page__content {
     margin: 30px 25px 0;

@@ -806,6 +806,11 @@
         &__item-container{
             width: 50%;
             margin-bottom: 20px;
+					&:last-child,
+					&:nth-child(3) {
+						margin-bottom: 0;
+					}
+
 					&:nth-child(3) {
 						.about-info__item,
 						.about-info__item-content {
@@ -1360,14 +1365,6 @@
     .footer-inside{
         &__partners-item-container{
             width: 100%;
-        }
-    }
-    .about-info{
-        &__item-container{
-
-            &:last-child{
-                margin-bottom: 20px;
-            }
         }
     }
 

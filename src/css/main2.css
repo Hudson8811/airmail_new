@@ -172,7 +172,11 @@
 
 .inside-page__about-info--top {
   margin: 40px 0;
-  width: calc(100% + 20px);
+}
+
+.inside-page__about-info--border {
+  padding-top: 40px;
+  border-top: 1px solid #ECECEC;
 }
 
 .inside-page__subtitle-info {

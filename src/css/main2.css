@@ -495,6 +495,11 @@
   width: 100%;
 }
 
+.fixed-menu__logo--course {
+  height: 34px;
+  width: 132px;
+}
+
 .fixed-menu__title {
   font-size: 23px;
   line-height: 28px;

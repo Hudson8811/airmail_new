@@ -1015,6 +1015,9 @@
 .fancybox-slide--html .fancybox-close-small{
     display: none;
 }
+.fancybox-active{
+    overflow: hidden;
+}
 .fancybox-slide .fancybox-content {
     width  : 1100px;
     height : 700px;

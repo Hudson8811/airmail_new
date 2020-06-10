@@ -1200,6 +1200,7 @@
           box-sizing: border-box;
   padding-left: 16px;
   padding-bottom: 1px;
+  cursor: pointer;
 }
 
 .scheme-paragraph--lit {

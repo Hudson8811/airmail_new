@@ -1084,6 +1084,10 @@
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
+.scheme .hexagon:hover .hexagon__button:before {
+  opacity: 1;
+}
+
 .scheme .hexagon--1 {
   top: 35px;
   right: 205px;
@@ -1212,6 +1216,20 @@
   -webkit-text-fill-color: transparent;
   font-size: 10px;
   line-height: 17px;
+}
+
+.scheme .hexagon__button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  opacity: 0;
+  border-bottom: 2px dashed #D045AE;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .scheme .hexagon:before,

@@ -490,11 +490,11 @@ $(document).ready(function () {
       $('body, html').animate({scrollTop: to}, 800);
 		});
 
-    $('#copy-btn').click(function () {
+    $('.copy').click(function () {
       let buffer = $('<input>');
       $('body').append(buffer);
       buffer.val($('.contacts-us__link').text()).select();
       document.execCommand("copy");
       buffer.remove();
-		})
+		});
 });

@@ -1369,6 +1369,18 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
+    .video-block--order {
+        margin-top: 0 !important;
+
+        .video-block {
+            &__link-container {
+                margin-top: 15px;
+                margin-left: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {

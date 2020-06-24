@@ -113,11 +113,6 @@
         &--top{
             margin: 40px 0;
         }
-
-        &--border {
-            padding-top: 40px;
-            border-top: 1px solid #ECECEC;
-        }
     }
     &__subtitle-info{
         padding: 40px 0;
@@ -178,6 +173,30 @@
                     content: '';
                 }
             }
+
+            .download-report {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                bottom: -5px;
+
+                &:hover {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+
+                img {
+                    width: 17px;
+                    height: 22px;
+                    margin-right: 5px;
+                }
+                
+                span {
+                    font-size: 14px;
+                    color: #0568D9;
+                }
+            }
         }
 
         #section2,
@@ -204,7 +223,7 @@
         }
     }
     &__text-block{
-        margin: 40px 0;
+        margin: 60px 0;
     }
    
 
@@ -377,6 +396,25 @@
                 font-size: 14px;
                 line-height: 32px;
                 color: #BD1E1E;
+            }
+        }
+
+        &--scheme {
+            padding: 40px 0;
+            margin-top: 40px;
+            margin-bottom: 0;
+            border-top: none;
+
+            &::before {
+                height: 100%;
+                background: linear-gradient(90deg, rgba(#FFA34C, 0.15) 15%, #fff);
+            }
+
+            .inside-page__notice-title {
+                font-size: 24px;
+                line-height: 28px;
+                color: #292929;
+                margin-bottom: 30px;
             }
         }
     }
@@ -645,7 +683,6 @@
 
     &__content{
         padding: 30px 35px;
-        background-color: #fff;
         border-radius: 8px;
         box-sizing: border-box;
 
@@ -654,10 +691,12 @@
         font-size: 24px;
         line-height: 28px;
         font-weight: 700;
-        background-image: linear-gradient(228.29deg, #D045AE 50%, #473CC2 98.79%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #fff;
         margin-bottom: 20px;
+    }
+    
+    p {
+        color: #fff;
     }
 }
 .video-block{
@@ -697,6 +736,20 @@
 
         }
         
+    }
+
+    &--order {
+        margin-top: 40px;
+        justify-content: space-between;
+
+        .video-block {
+            &__link-container {
+                width: 240px;
+                height: 135px;
+                margin-right: 0;
+                margin-left: 40px;
+            }
+        }
     }
 }
 .about-info{

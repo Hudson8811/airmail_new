@@ -198,6 +198,15 @@
                     color: #0568D9;
                 }
             }
+
+            .advanced-course {
+                border-bottom: 1px dashed;
+                transition: border-bottom-color 0.2s ease;
+
+                &:hover {
+                    border-bottom-color: transparent;
+                }
+            }
         }
 
         #section2,

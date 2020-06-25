@@ -484,11 +484,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.anchor-scroll').click(function () {
-      link = $(this).attr('href');
-      to = $(link).offset().top;
-      $('body, html').animate({scrollTop: to}, 800);
-		});
+    anchorScroll($('.anchor-scroll'));
+    anchorScroll($('.advanced-course'));
 
     $('.copy').click(function () {
       let buffer = $('<input>');
@@ -497,4 +494,12 @@ $(document).ready(function () {
       document.execCommand("copy");
       buffer.remove();
 		});
+
+	  function anchorScroll(e) {
+      e.click(function () {
+				link = $(this).attr('href');
+				to = $(link).offset().top;
+				$('body, html').animate({scrollTop: to}, 800);
+			})
+		}
 });

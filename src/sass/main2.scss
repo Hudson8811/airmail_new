@@ -151,12 +151,8 @@
                 box-sizing: border-box;
                 padding-left: 15px;
                 font-size: 15px;
-                line-height: 22px;
+                line-height: 32px;
                 color: #292929;
-
-                &:not(:last-child) {
-                    margin-bottom: 12px;
-                }
               
                 &:before{
                     content: '•';
@@ -167,6 +163,16 @@
                 }
             }
         }
+
+				.include-list {
+					li {
+						line-height: 22px;
+
+						&:not(:last-child) {
+							margin-bottom: 12px;
+						}
+					}
+				}
 
         #section4 {
             ul li {

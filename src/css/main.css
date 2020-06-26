@@ -4652,12 +4652,8 @@ button.mfp-close {
           box-sizing: border-box;
   padding-left: 15px;
   font-size: 15px;
-  line-height: 22px;
+  line-height: 32px;
   color: #292929;
-}
-
-.inside-page__content ul li:not(:last-child) {
-  margin-bottom: 12px;
 }
 
 .inside-page__content ul li:before {
@@ -4665,6 +4661,14 @@ button.mfp-close {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.inside-page__content .include-list li {
+  line-height: 22px;
+}
+
+.inside-page__content .include-list li:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .inside-page__content #section4 ul li {

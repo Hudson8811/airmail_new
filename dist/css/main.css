@@ -4628,6 +4628,7 @@ button.mfp-close {
 .inside-page__content p {
   font-size: 15px;
   line-height: 32px;
+  font-weight: bold;
 }
 
 .inside-page__content p + p {

@@ -3081,7 +3081,7 @@ button.mfp-close {
 }
 
 .time-discount-block {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .time-discount-block-flex {
@@ -4588,7 +4588,7 @@ button.mfp-close {
   font-size: 14px;
   line-height: 25px;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .inside-page__title {
@@ -4632,6 +4632,7 @@ button.mfp-close {
 
 .inside-page__content p + p {
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .inside-page__content ul {
@@ -4647,8 +4648,12 @@ button.mfp-close {
           box-sizing: border-box;
   padding-left: 15px;
   font-size: 15px;
-  line-height: 32px;
+  line-height: 22px;
   color: #292929;
+}
+
+.inside-page__content ul li:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .inside-page__content ul li:before {
@@ -4662,6 +4667,7 @@ button.mfp-close {
   border-radius: 5px;
   background-color: rgba(61, 61, 61, 0.03);
   padding: 10px 10px 10px 20px;
+  line-height: 32px;
 }
 
 .inside-page__content #section4 ul li:not(:last-child) {
@@ -5199,7 +5205,7 @@ button.mfp-close {
   background: rgba(0, 152, 199, 0.2);
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .telegram__image-container {
@@ -5212,6 +5218,9 @@ button.mfp-close {
 }
 
 .telegram__image-container span {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: bold;
   color: #0098C7;
   margin-left: 20px;
 }
@@ -5229,6 +5238,7 @@ button.mfp-close {
 .telegram__link {
   font-size: 14px;
   line-height: 28px;
+  font-weight: bold;
   color: #0098C7;
   margin-right: 15px;
   text-transform: uppercase;
@@ -5429,6 +5439,10 @@ button.mfp-close {
   margin-left: 40px;
 }
 
+.video-block--order p span {
+  font-weight: bold;
+}
+
 .about-info__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5542,6 +5556,12 @@ button.mfp-close {
   /*cover up extra shadows*/
 }
 
+@media screen and (max-width: 768px) {
+  .scheme {
+    padding-bottom: 0;
+  }
+}
+
 .scheme__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5554,10 +5574,6 @@ button.mfp-close {
           justify-content: center;
   text-align: center;
   font-weight: 600;
-  height: 358px;
-  width: 358px;
-  background: url(../img/scheme-img.png) no-repeat center center;
-  background-size: contain;
   font-size: 24px;
   line-height: 27px;
 }
@@ -5572,10 +5588,47 @@ button.mfp-close {
 
 @media screen and (max-width: 768px) {
   .scheme__title {
-    width: 250px;
+    /*width: 250px;*/
     font-size: 20px;
     line-height: 24px;
-    height: 250px;
+    /*height: 250px;*/
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .scheme__title {
+    height: 358px;
+    width: 358px;
+    background: url(../img/scheme-img.png) no-repeat center center;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scheme__title br {
+    display: none;
+  }
+}
+
+.scheme__title--outer {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .scheme__title--outer {
+    display: none;
+  }
+}
+
+.scheme__title--inner {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .scheme__title--inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -5615,21 +5668,24 @@ button.mfp-close {
 @media screen and (max-width: 768px) {
   .scheme__row {
     max-width: 580px;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
 @media screen and (max-width: 660px) {
   .scheme__row {
-    height: 640px;
+    /*height: 640px;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -5641,7 +5697,11 @@ button.mfp-close {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 790px;
+    left: 55px;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    /*height: 790px;*/
   }
 }
 
@@ -5665,18 +5725,12 @@ button.mfp-close {
 .scheme .hexagon--1 {
   top: 35px;
   right: 205px;
-}
-
-@media screen and (max-width: 660px) {
-  .scheme .hexagon--1 {
-    right: 0;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .scheme .hexagon--1 {
-    top: 250px;
-  }
+  /*@media screen and (max-width:660px){
+                right: 0;
+            }
+            @media screen and (max-width:450px){
+                top: 250px;
+            }*/
 }
 
 .scheme .hexagon--2 {
@@ -5685,32 +5739,21 @@ button.mfp-close {
       -ms-transform: translateY(-50%) rotate(90deg);
           transform: translateY(-50%) rotate(90deg);
   right: 32px;
-}
-
-@media screen and (max-width: 660px) {
-  .scheme .hexagon--2 {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .scheme .hexagon--2 {
-    top: 455px;
-    -webkit-transform: translateY(0) rotate(90deg);
-        -ms-transform: translateY(0) rotate(90deg);
-            transform: translateY(0) rotate(90deg);
-  }
+  /*@media screen and (max-width:660px){
+                left: 0;
+            }
+            @media screen and (max-width:450px){
+                top: 455px;
+                transform: translateY(0) rotate(90deg);
+            }*/
 }
 
 .scheme .hexagon--3 {
   right: 205px;
   bottom: 15px;
-}
-
-@media screen and (max-width: 660px) {
-  .scheme .hexagon--3 {
-    right: 0;
-  }
+  /*@media screen and (max-width:660px){
+                right: 0;
+            }*/
 }
 
 .scheme .hexagon__content {
@@ -6347,6 +6390,9 @@ button.mfp-close {
     font-size: 32px;
     line-height: 35px;
   }
+  .video-block--order {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -6661,7 +6707,7 @@ button.mfp-close {
     margin-bottom: 20px;
   }
   .inside-page section + section {
-    padding-top: 35px;
+    padding-top: 25px;
   }
   .about-info__item-container {
     width: 25%;

@@ -130,8 +130,12 @@
         p{
             font-size: 15px;
             line-height: 32px;
+        }
+
+        .p-bold {
             font-weight: bold;
         }
+
         p + p{
             margin-top: 20px;
             font-weight: bold;

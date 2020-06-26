@@ -190,6 +190,9 @@
 .inside-page__content p {
   font-size: 15px;
   line-height: 32px;
+}
+
+.inside-page__content .p-bold {
   font-weight: bold;
 }
 

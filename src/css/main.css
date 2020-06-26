@@ -5225,6 +5225,15 @@ button.mfp-close {
           align-items: center;
 }
 
+.telegram__image-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .telegram__image-container span {
   font-size: 16px;
   line-height: 28px;
@@ -5234,6 +5243,15 @@ button.mfp-close {
 }
 
 .telegram__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.telegram__copy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5259,6 +5277,7 @@ button.mfp-close {
 .telegram__avatar {
   border-radius: 50%;
   overflow: hidden;
+  width: 42px;
   height: 42px;
   margin-left: 20px;
 }
@@ -5682,9 +5701,6 @@ button.mfp-close {
 @media screen and (max-width: 768px) {
   .scheme__row {
     max-width: 580px;
-    -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-            transform: scale(0.8);
   }
 }
 
@@ -5705,16 +5721,13 @@ button.mfp-close {
 
 @media screen and (max-width: 450px) {
   .scheme__row {
+    height: 314px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    left: 55px;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
     /*height: 790px;*/
   }
 }
@@ -5732,6 +5745,22 @@ button.mfp-close {
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+  .scheme .hexagon {
+    -webkit-transform: scale(0.8) rotate(90deg);
+        -ms-transform: scale(0.8) rotate(90deg);
+            transform: scale(0.8) rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scheme .hexagon {
+    -webkit-transform: scale(0.65) rotate(90deg);
+        -ms-transform: scale(0.65) rotate(90deg);
+            transform: scale(0.65) rotate(90deg);
+  }
+}
+
 .scheme .hexagon:hover .hexagon__button:before {
   opacity: 1;
 }
@@ -5739,12 +5768,21 @@ button.mfp-close {
 .scheme .hexagon--1 {
   top: 35px;
   right: 205px;
-  /*@media screen and (max-width:660px){
-                right: 0;
-            }
-            @media screen and (max-width:450px){
-                top: 250px;
-            }*/
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  .scheme .hexagon--1 {
+    right: auto;
+    left: 0;
+    top: 54px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scheme .hexagon--1 {
+    right: auto;
+    left: 0;
+  }
 }
 
 .scheme .hexagon--2 {
@@ -5753,21 +5791,48 @@ button.mfp-close {
       -ms-transform: translateY(-50%) rotate(90deg);
           transform: translateY(-50%) rotate(90deg);
   right: 32px;
-  /*@media screen and (max-width:660px){
-                left: 0;
-            }
-            @media screen and (max-width:450px){
-                top: 455px;
-                transform: translateY(0) rotate(90deg);
-            }*/
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  .scheme .hexagon--2 {
+    -webkit-transform: translateY(-50%) rotate(90deg) scale(0.8);
+        -ms-transform: translateY(-50%) rotate(90deg) scale(0.8);
+            transform: translateY(-50%) rotate(90deg) scale(0.8);
+    right: auto;
+    left: 138px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scheme .hexagon--2 {
+    -webkit-transform: translateY(-50%) rotate(90deg) scale(0.65);
+        -ms-transform: translateY(-50%) rotate(90deg) scale(0.65);
+            transform: translateY(-50%) rotate(90deg) scale(0.65);
+    right: auto;
+    left: 114px;
+    top: 50%;
+  }
 }
 
 .scheme .hexagon--3 {
   right: 205px;
   bottom: 15px;
-  /*@media screen and (max-width:660px){
-                right: 0;
-            }*/
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  .scheme .hexagon--3 {
+    right: auto;
+    left: 0;
+    bottom: 34px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scheme .hexagon--3 {
+    right: auto;
+    left: 0;
+    bottom: 35px;
+  }
 }
 
 .scheme .hexagon__content {

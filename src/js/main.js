@@ -487,7 +487,7 @@ $(document).ready(function () {
     anchorScroll($('.anchor-scroll'));
     anchorScroll($('.advanced-course'));
 
-    $('.copy').click(function () {
+    $('.telegram__copy').click(function () {
       let buffer = $('<input>');
       $('body').append(buffer);
       buffer.val($('.contacts-us__link').text()).select();

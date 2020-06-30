@@ -375,16 +375,15 @@ $('.fixed-menu__list-item a').click(function () {
 });
 
 $(window).on("load", function () {
-    if(window.matchMedia('(min-width: 961px)').matches){
+    if (window.matchMedia('(min-width: 961px)').matches) {
         $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
     }
 });
 
-$(window).resize(function(){
-    if(window.matchMedia('(min-width: 961px)').matches){
+$(window).resize(function () {
+    if (window.matchMedia('(min-width: 961px)').matches) {
         $(".js-mCSB-table-modal:not(.mCustomScrollbar), .js-create-list-wrap:not(.mCustomScrollbar)").mCustomScrollbar();
-    }
-    else{
+    } else {
         $(".js-mCSB-table-modal.mCustomScrollbar, .js-create-list-wrap.mCustomScrollbar").mCustomScrollbar('destroy');
     }
 });
@@ -443,22 +442,24 @@ $(window).resize(function(){
     };
 })(jQuery);
 
-function getNumEnding(iNumber, aEndings)
-{
+function getNumEnding(iNumber, aEndings) {
     var sEnding, i;
     iNumber = iNumber % 100;
-    if (iNumber>=11 && iNumber<=19) {
-        sEnding=aEndings[2];
-    }
-    else {
+    if (iNumber >= 11 && iNumber <= 19) {
+        sEnding = aEndings[2];
+    } else {
         i = iNumber % 10;
-        switch (i)
-        {
-            case (1): sEnding = aEndings[0]; break;
+        switch (i) {
+            case (1):
+                sEnding = aEndings[0];
+                break;
             case (2):
             case (3):
-            case (4): sEnding = aEndings[1]; break;
-            default: sEnding = aEndings[2];
+            case (4):
+                sEnding = aEndings[1];
+                break;
+            default:
+                sEnding = aEndings[2];
         }
     }
     return sEnding;
@@ -477,10 +478,10 @@ $(document).ready(function () {
     countdown1.countdown({
         timestamp: ts,
         callback: function (days, hours, minutes, seconds) {
-            countdown1.find('.tdbl-timer-counter__day').html(days+" "+getNumEnding(days, ['день', 'дня', 'дней']));
-            countdown1.find('.tdbl-timer-counter__hours').html(hours.toString().padStart(2,0));
-            countdown1.find('.tdbl-timer-counter__minutes').html(minutes.toString().padStart(2,0));
-            countdown1.find('.tdbl-timer-counter__seconds').html(seconds.toString().padStart(2,0));
+            countdown1.find('.tdbl-timer-counter__day').html(days + " " + getNumEnding(days, ['день', 'дня', 'дней']));
+            countdown1.find('.tdbl-timer-counter__hours').html(hours.toString().padStart(2, 0));
+            countdown1.find('.tdbl-timer-counter__minutes').html(minutes.toString().padStart(2, 0));
+            countdown1.find('.tdbl-timer-counter__seconds').html(seconds.toString().padStart(2, 0));
         }
     });
 
@@ -488,18 +489,38 @@ $(document).ready(function () {
     anchorScroll($('.advanced-course'));
 
     $('.telegram__copy').click(function () {
-      let buffer = $('<input>');
-      $('body').append(buffer);
-      buffer.val($('.contacts-us__link').text()).select();
-      document.execCommand("copy");
-      buffer.remove();
-		});
+        let buffer = $('<input>');
+        $('body').append(buffer);
+        buffer.val($('.contacts-us__link').text()).select();
+        document.execCommand("copy");
+        buffer.remove();
+    });
 
-	  function anchorScroll(e) {
-      e.click(function () {
-				link = $(this).attr('href');
-				to = $(link).offset().top;
-				$('body, html').animate({scrollTop: to}, 800);
-			})
-		}
+    function anchorScroll(e) {
+        e.click(function () {
+            link = $(this).attr('href');
+            to = $(link).offset().top;
+            $('body, html').animate({
+                scrollTop: to
+            }, 800);
+        })
+    }
+
+
+    function validateEmail(email) {
+        var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        return re.test(String(email).toLowerCase());
+      }
+
+    $('.js-form-validate-email button').click(function (event) {
+        event.preventDefault();
+        var val=$(this).find('input[name="email"').value();
+        validateEmail(val);
+        console.log(val);
+        console.log(validateEmail(val));
+    });
 });
+
+
+
+

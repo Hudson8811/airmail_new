@@ -534,8 +534,12 @@
                     </div>
                     <div class="rss-block">
                         <div class="rss-block__title">Участвовствуйте в розыгрыше последнего места курса</div>
-                        <form class="rss-block__form">
-                            <input placeholder="Укажите ваш Email" type="email">
+                        <form class="rss-block__form js-form-validate-email">
+                            <div class="email-validate-wrap">
+                                <input placeholder="Укажите ваш Email" type="text" name="email">
+                                <div class="input-validate-log"></div>
+                            </div>
+
                             <button>ОТПРАВИТЬ</button>
                         </form>
                     </div>

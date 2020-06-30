@@ -2625,7 +2625,7 @@
 }
 
 .inside-page .rss-block__form .email-validate-wrap--invalid input {
-  border-color: #4b4949 !important;
+  border-color: #bd1e1e !important;
 }
 
 .inside-page .rss-block__form button[disabled] {

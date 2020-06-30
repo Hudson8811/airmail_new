@@ -510,17 +510,26 @@ $(document).ready(function () {
     function validateEmail(email) {
         var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
         return re.test(String(email).toLowerCase());
-      }
+    }
 
     $('.js-form-validate-email button').click(function (event) {
         event.preventDefault();
-        var val=$(this).find('input[name="email"').value();
-        validateEmail(val);
-        console.log(val);
-        console.log(validateEmail(val));
+        var $this = $(this);
+        var wrap = $(this).parent().find('.email-validate-wrap');
+        var val=wrap.find('input[name="email"]').val();
+
+        if(validateEmail(val)){
+            wrap.find('.input-validate-log').html('Письмо успешно отправлено');
+            wrap
+            .removeClass('email-validate-wrap--invalid')
+            .addClass('email-validate-wrap--valid');
+            $this.prop("disabled", true);
+        }
+        else{
+            wrap.find('.input-validate-log').html('Ошибка валидации');
+            wrap
+            .removeClass('email-validate-wrap--valid')
+            .addClass('email-validate-wrap--invalid');
+        }
     });
 });
-
-
-
-

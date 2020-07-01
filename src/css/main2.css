@@ -567,6 +567,17 @@
   margin-bottom: 20px;
 }
 
+.inside-page .rss-block__title a {
+  border-bottom: 1px dashed;
+  -webkit-transition: border-bottom-color 0.3s ease;
+  -o-transition: border-bottom-color 0.3s ease;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.inside-page .rss-block__title a:hover {
+  border-bottom-color: transparent;
+}
+
 .inside-page .rss-block__form {
   display: -webkit-box;
   display: -ms-flexbox;

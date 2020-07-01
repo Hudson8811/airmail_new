@@ -487,6 +487,8 @@ $(document).ready(function () {
 
     anchorScroll($('.anchor-scroll'));
     anchorScroll($('.advanced-course'));
+    anchorScroll($('.base-course-anchor'));
+    anchorScroll($('.exam-anchor'));
 
     $('.telegram__copy').click(function () {
         let buffer = $('<input>');

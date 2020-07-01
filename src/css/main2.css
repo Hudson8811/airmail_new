@@ -534,6 +534,21 @@
   background: linear-gradient(90deg, rgba(255, 163, 76, 0.15) 15%, #fff);
 }
 
+.inside-page__notice--scheme p {
+  font-size: 14px;
+}
+
+.inside-page__notice--scheme p a {
+  border-bottom: 1px dashed;
+  -webkit-transition: border-bottom-color 0.3s ease;
+  -o-transition: border-bottom-color 0.3s ease;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.inside-page__notice--scheme p a:hover {
+  border-bottom-color: transparent;
+}
+
 .inside-page__notice--scheme .inside-page__notice-title {
   font-size: 24px;
   line-height: 28px;

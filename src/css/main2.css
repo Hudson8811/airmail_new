@@ -992,6 +992,26 @@
   height: 100%;
 }
 
+.telegram--popup {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding: 16px 40px 16px 20px;
+}
+
+.telegram--popup .telegram__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.telegram--popup .telegram__avatar {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
 .contacts-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2692,4 +2712,53 @@
           transition-duration: .2s;
   position: absolute;
   top: 40px;
+}
+
+.raffle.fancybox-content {
+  max-width: 400px;
+  width: 100%;
+  padding: 32px;
+  background-color: #fff;
+  height: 277px;
+  border-radius: 4px;
+}
+
+.raffle.fancybox-content .raffle {
+  position: relative;
+}
+
+.raffle.fancybox-content .raffle__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.raffle.fancybox-content .raffle__to-channel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0098C7;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 14px 0;
+}
+
+.raffle.fancybox-content .raffle__close {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 30px;
+  right: 32px;
 }

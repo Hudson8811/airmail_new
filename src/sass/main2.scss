@@ -874,6 +874,24 @@
         width: 100%;
         height: 100%;
     }
+
+    &--popup {
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding: 16px 40px 16px 20px;
+
+        .telegram {
+            &__left {
+                display: flex;
+                align-items: center;
+            }
+
+            &__avatar {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+        }
+    }
 }
 
 .contacts-us {
@@ -2571,4 +2589,47 @@
     transition-duration: .2s;
     position: absolute;
     top: 40px;
+}
+
+.raffle.fancybox-content {
+    max-width: 400px;
+    width: 100%;
+    padding: 32px;
+    background-color: #fff;
+    height: 277px;
+    border-radius: 4px;
+
+    .raffle {
+        position: relative;
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+        }
+
+        &__to-channel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0098C7;
+            font-size: 16px;
+            line-height: 32px;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 14px 0;
+        }
+
+        &__close {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 30px;
+            right: 32px;
+        }
+    }
 }

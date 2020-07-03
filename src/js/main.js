@@ -526,6 +526,18 @@ $(document).ready(function () {
             .removeClass('email-validate-wrap--invalid')
             .addClass('email-validate-wrap--valid');
             $this.prop("disabled", true);
+            $.fancybox.open({
+              modal: true,
+              src: '#raffle',
+              type: 'inline',
+							touch: false,
+							scrolling: 'no',
+              smallBtn: true,
+              toolbar: true,
+							btnTpl : {
+								smallBtn : '<div data-fancybox-close class="raffle__close"><img src="img/SVG/popup-close.svg" alt=""></div>'
+							}
+            });
         }
         else{
             wrap.find('.input-validate-log').html('Ошибка валидации');

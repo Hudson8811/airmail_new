@@ -878,7 +878,7 @@
     &--popup {
         margin-top: 30px;
         margin-bottom: 0;
-        padding: 16px 40px 16px 20px;
+        padding: 16px 20px;
 
         .telegram {
             &__left {
@@ -889,6 +889,10 @@
             &__avatar {
                 margin-left: 0;
                 margin-right: 12px;
+            }
+
+            &__link {
+                margin-right: 0;
             }
         }
     }
@@ -2594,13 +2598,15 @@
 .raffle.fancybox-content {
     max-width: 400px;
     width: 100%;
-    padding: 32px;
     background-color: #fff;
-    height: 277px;
+    height: auto;
     border-radius: 4px;
+    padding: 0;
 
     .raffle {
-        position: relative;
+        &__content {
+            padding: 32px;
+        }
 
         &__title {
             font-size: 20px;
@@ -2616,9 +2622,6 @@
             font-size: 16px;
             line-height: 32px;
             color: #fff;
-            position: absolute;
-            left: 0;
-            bottom: 0;
             width: 100%;
             padding: 14px 0;
         }
@@ -2632,4 +2635,8 @@
             right: 32px;
         }
     }
+}
+
+.popup--raffle .fancybox-button--close {
+    display: none;
 }

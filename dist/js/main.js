@@ -527,16 +527,11 @@ $(document).ready(function () {
             .addClass('email-validate-wrap--valid');
             $this.prop("disabled", true);
             $.fancybox.open({
-              modal: true,
+              baseClass: 'popup--raffle',
               src: '#raffle',
               type: 'inline',
 							touch: false,
-							scrolling: 'no',
-              smallBtn: true,
-              toolbar: true,
-							btnTpl : {
-								smallBtn : '<div data-fancybox-close class="raffle__close"><img src="img/SVG/popup-close.svg" alt=""></div>'
-							}
+							scrolling: 'no'
             });
         }
         else{

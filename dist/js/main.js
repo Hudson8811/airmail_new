@@ -490,13 +490,18 @@ $(document).ready(function () {
     anchorScroll($('.base-course-anchor'));
     anchorScroll($('.exam-anchor'));
 
-    $('.telegram__copy').click(function () {
-        let buffer = $('<input>');
-        $('body').append(buffer);
-        buffer.val($('.contacts-us__link').text()).select();
-        document.execCommand("copy");
-        buffer.remove();
-    });
+    textCopy($('.contacts-us__link'));
+	  textCopy($('.telegram__link'));
+
+    function textCopy(text) {
+      $('.copy').click(function () {
+				let buffer = $('<input>');
+				$('body').append(buffer);
+				buffer.val($(this).parent().find(text).text()).select();
+				document.execCommand("copy");
+				buffer.remove();
+			});
+		}
 
     function anchorScroll(e) {
         e.click(function () {
